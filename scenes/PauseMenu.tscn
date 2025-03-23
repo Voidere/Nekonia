@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdbf2jw20vp12"]
+
+[ext_resource type="Script" uid="uid://c2y3hokbhjnox" path="res://scripts/pause_menu.gd" id="1_syp2i"]
+[ext_resource type="Shader" uid="uid://b54nxwcx2ssge" path="res://assets/game/PauseMenu.gdshader" id="2_2k0rb"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_3u5ct"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xl6wd"]
+shader = ExtResource("2_2k0rb")
+shader_parameter/amount = 3.0
+
+[node name="pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syp2i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_xl6wd")
+layout_mode = 0
+offset_left = -2479.0
+offset_top = -763.0
+offset_right = 2080.0
+offset_bottom = 1266.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.5
+offset_top = -150.0
+offset_right = 250.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme = ExtResource("2_3u5ct")
+text = " Resume "
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme = ExtResource("2_3u5ct")
+text = " Options "
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme = ExtResource("2_3u5ct")
+text = " Main Menu "
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

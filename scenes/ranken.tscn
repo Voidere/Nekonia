@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://bldjew24p1teq"]
+
+[ext_resource type="Texture2D" uid="uid://dk3xb04rguxa2" path="res://assets/rankennew.png" id="1_goa5f"]
+[ext_resource type="PackedScene" uid="uid://euimrmjjxn4l" path="res://scenes/ladder.tscn" id="2_q1rwx"]
+
+[sub_resource type="Animation" id="Animation_lgqkl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.588688]
+}
+
+[sub_resource type="Animation" id="Animation_kj80c"]
+resource_name = "ranken_anim"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-28, 42), Vector2(29, 40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.588688, -0.637546]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wv7vw"]
+_data = {
+&"RESET": SubResource("Animation_lgqkl"),
+&"ranken_anim": SubResource("Animation_kj80c")
+}
+
+[node name="Ranken" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.588688
+scale = Vector2(1.09678, 1.01263)
+texture = ExtResource("1_goa5f")
+
+[node name="ladder" parent="Sprite2D" instance=ExtResource("2_q1rwx")]
+position = Vector2(0.399385, -0.155106)
+rotation = -0.0426395
+scale = Vector2(0.494384, 5.44702)
+skew = 0.0106744
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wv7vw")
+}
+autoplay = "ranken_anim"

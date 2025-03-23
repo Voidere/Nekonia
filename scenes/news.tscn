@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnq6vp2j2f7gb"]
+
+[ext_resource type="Script" uid="uid://w12uihp1hd1b" path="res://scripts/news.gd" id="1_65jtq"]
+[ext_resource type="Texture2D" uid="uid://00cfxmx2cpnt" path="res://assets/lig.png" id="2_sad5e"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_stmrn"]
+[ext_resource type="FontFile" uid="uid://0nyawcbtrbur" path="res://assets/fonts/PixelOperator8.ttf" id="3_f8xbb"]
+
+[node name="news" type="PopupPanel"]
+auto_translate_mode = 1
+position = Vector2i(278, 135)
+size = Vector2i(685, 400)
+visible = true
+borderless = false
+script = ExtResource("1_65jtq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 681.0
+offset_bottom = 396.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 2.5)
+texture = ExtResource("2_sad5e")
+offset = Vector2(220, 80)
+
+[node name="Button_Update1" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 681.0
+offset_bottom = 396.0
+theme = ExtResource("2_stmrn")
+theme_override_fonts/font = ExtResource("3_f8xbb")
+text = "Version 0.2.1"
+
+[node name="Button_Update2" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 681.0
+offset_bottom = 396.0
+theme = ExtResource("2_stmrn")
+theme_override_fonts/font = ExtResource("3_f8xbb")
+text = "Version 0.2.0"
+
+[node name="Button_Update3" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 681.0
+offset_bottom = 396.0
+theme = ExtResource("2_stmrn")
+theme_override_fonts/font = ExtResource("3_f8xbb")
+text = "Version 0.1.1"
+
+[node name="Button_Update4" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 681.0
+offset_bottom = 396.0
+theme = ExtResource("2_stmrn")
+theme_override_fonts/font = ExtResource("3_f8xbb")
+text = "Version 0.1.0"

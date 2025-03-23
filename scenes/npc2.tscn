@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0x1iqs0b2fbq"]
+
+[ext_resource type="Texture2D" uid="uid://bqvy508b0g727" path="res://assets/Villager/1 Old_man/Old_man_walk.png" id="1_ni6xh"]
+[ext_resource type="Script" uid="uid://dbpu0nltkos30" path="res://scenes/npc_2.gd" id="1_tnn7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlth3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82x8u"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i27nv"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjb18"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_088jm"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqi1t"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s6ue"]
+atlas = ExtResource("1_ni6xh")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4usmo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82x8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i27nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjb18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_088jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqi1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s6ue")
+}],
+"loop": true,
+"name": &"wlak",
+"speed": 5.0
+}]
+
+[node name="npc2" type="CharacterBody2D"]
+script = ExtResource("1_tnn7j")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jlth3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -4)
+scale = Vector2(0.541667, 0.583333)
+sprite_frames = SubResource("SpriteFrames_4usmo")
+animation = &"wlak"
+autoplay = "wlak"
+
+[node name="RayCastright" type="RayCast2D" parent="."]
+target_position = Vector2(19, 0)
+
+[node name="RayCastleft" type="RayCast2D" parent="."]
+target_position = Vector2(-21, 0)

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkjpassn5w811"]
+
+[ext_resource type="Script" uid="uid://d2hvpgpj6ydie" path="res://scripts/options.gd" id="1_1bqlf"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_aaveb"]
+[ext_resource type="Texture2D" uid="uid://d22q6ufgfp213" path="res://assets/back.png" id="4_21jhf"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_28wo4"]
+[ext_resource type="PackedScene" uid="uid://d0pe5ludk0qpc" path="res://scenes/soundvolume.tscn" id="5_1sggn"]
+
+[node name="options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1bqlf")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(591, 284)
+scale = Vector2(18.84, 18.84)
+texture = ExtResource("4_21jhf")
+
+[node name="back" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 36.0
+offset_top = 535.0
+offset_right = 226.0
+offset_bottom = 635.0
+theme = ExtResource("2_aaveb")
+text = "Back"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 108.0
+offset_top = 212.0
+offset_right = 1140.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("4_28wo4")
+theme_override_font_sizes/font_size = 64
+text = "Work in Pogress..."
+
+[node name="Control" parent="." instance=ExtResource("5_1sggn")]
+layout_mode = 1
+offset_left = 46.0
+offset_top = 88.0
+offset_right = -643.0
+offset_bottom = -424.0
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

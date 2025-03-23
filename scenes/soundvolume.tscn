@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0pe5ludk0qpc"]
+
+[ext_resource type="Script" uid="uid://do78efp4y7fs0" path="res://scripts/soundvolume.gd" id="1_hu163"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hu163")
+
+[node name="MusicSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_right = 445.0
+offset_bottom = 16.0
+ticks_on_borders = true
+
+[node name="SFXSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 445.0
+offset_bottom = 38.0
+tick_count = 10
+ticks_on_borders = true

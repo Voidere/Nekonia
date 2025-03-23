@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://bylqpbf4omdge"]
+
+[ext_resource type="Script" uid="uid://coh3frgp5ewar" path="res://scripts/pickup.gd" id="1_gsbl7"]
+[ext_resource type="Texture2D" uid="uid://lh74ffy3jd1c" path="res://assets/pumpkinsprite.png" id="2_gjo4x"]
+[ext_resource type="Texture2D" uid="uid://duiko0o4r2sf0" path="res://assets/pixil-frame-0 (9).png" id="3_g2hgl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkjwn"]
+atlas = ExtResource("2_gjo4x")
+region = Rect2(0, 19, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2jpv"]
+atlas = ExtResource("2_gjo4x")
+region = Rect2(0, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgeis"]
+atlas = ExtResource("3_g2hgl")
+region = Rect2(80, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glqre"]
+atlas = ExtResource("3_g2hgl")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmyln"]
+atlas = ExtResource("3_g2hgl")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_daihs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkjwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2jpv")
+}],
+"loop": true,
+"name": &"haloween",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgeis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glqre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmyln")
+}],
+"loop": true,
+"name": &"xmas",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oc8gl"]
+radius = 6.0
+
+[sub_resource type="Gradient" id="Gradient_0jsf6"]
+offsets = PackedFloat32Array(0.242857, 0.471429, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.575001, 0.575001, 0.575001, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gexdp"]
+gradient = SubResource("Gradient_0jsf6")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.916667, 0.0686275)
+
+[node name="pickup" type="Area2D"]
+script = ExtResource("1_gsbl7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -10)
+scale = Vector2(1.20066, 1.25662)
+sprite_frames = SubResource("SpriteFrames_daihs")
+animation = &"xmas"
+autoplay = "xmas"
+frame = 1
+frame_progress = 0.325882
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_oc8gl")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(0.30957, 0.304688)
+texture = SubResource("GradientTexture2D_gexdp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfbttogu7tks"]
+
+[ext_resource type="Script" uid="uid://c40jbjourbakc" path="res://scripts/player.gd" id="1_unu5v"]
+[ext_resource type="SpriteFrames" uid="uid://b8ibgp5q37n5p" path="res://assets/game/player1.tres" id="2_61vw2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvqxj"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 7
+script = ExtResource("1_unu5v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.55271e-15, -5.96046e-08)
+scale = Vector2(1.08106, 1.05652)
+sprite_frames = ExtResource("2_61vw2")
+animation = &"take_damage"
+frame = 3
+frame_progress = 0.197759
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+visible = false
+scale = Vector2(1.05, 1.05)
+shape = SubResource("CircleShape2D_yvqxj")

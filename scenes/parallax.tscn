@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://isa0wo6hwyp1"]
+
+[ext_resource type="Texture2D" uid="uid://b8khx23sn5cmj" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/sky.png" id="1_3a4t6"]
+[ext_resource type="Texture2D" uid="uid://bycp1dfwt2yua" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/far-mountains.png" id="2_1t45c"]
+[ext_resource type="Texture2D" uid="uid://bo7jtbcb4t8on" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/middle-mountains.png" id="3_caf13"]
+[ext_resource type="Texture2D" uid="uid://b7f3cmu8slomk" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/far-trees.png" id="4_3u8pa"]
+[ext_resource type="Texture2D" uid="uid://dwi1274iqiq1k" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/myst.png" id="5_17io3"]
+[ext_resource type="Texture2D" uid="uid://l7j4qst66jr3" path="res://assets/Super Mountain Dusk Files/Assets/version B/Layers/near-trees.png" id="6_8bdt6"]
+[ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="7_pxyjx"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-160, -123)
+texture = ExtResource("1_3a4t6")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("2_1t45c")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("3_caf13")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture = ExtResource("4_3u8pa")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture = ExtResource("5_17io3")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(320, 240)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+texture = ExtResource("6_8bdt6")
+
+[node name="Player" parent="." instance=ExtResource("7_pxyjx")]
+position = Vector2(-101, -1)
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3.5, 3.5)

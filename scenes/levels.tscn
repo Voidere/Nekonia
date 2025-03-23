@@ -1,0 +1,242 @@
+[gd_scene load_steps=23 format=3 uid="uid://da1h051hshbva"]
+
+[ext_resource type="Script" uid="uid://d1ff83j6jvklq" path="res://scripts/levels.gd" id="1_7y4cr"]
+[ext_resource type="Texture2D" uid="uid://d22q6ufgfp213" path="res://assets/back.png" id="2_d4un2"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="3_igagp"]
+[ext_resource type="Texture2D" uid="uid://xbp84ylgppa1" path="res://assets/Walk.png" id="4_5iidf"]
+[ext_resource type="Script" uid="uid://b7tg1q8vlwypq" path="res://scripts/lv_3.gd" id="5_ccsmv"]
+[ext_resource type="Theme" uid="uid://lq3vcpfi0rpt" path="res://assets/own/winter.tres" id="5_gqcdg"]
+[ext_resource type="Script" uid="uid://wim63yhvv3cr" path="res://scripts/lv_2.gd" id="6_60lg6"]
+[ext_resource type="Script" uid="uid://nl4anrwd6jtu" path="res://scripts/lv_4.gd" id="6_sfxkl"]
+[ext_resource type="Texture2D" uid="uid://b8my3ba58llc6" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_4.png" id="7_l7dc3"]
+[ext_resource type="Texture2D" uid="uid://c4cyc1bdq4cjd" path="res://assets/png10 - Kopie.png" id="8_47roo"]
+[ext_resource type="FontFile" uid="uid://0nyawcbtrbur" path="res://assets/fonts/PixelOperator8.ttf" id="9_d42ix"]
+
+[sub_resource type="GDScript" id="GDScript_3jkfp"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckkxg"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 1, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pj7bd"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 640, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n82uh"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 1279, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82lgh"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 1918, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73gq1"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 2557, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgfvs"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 3196, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8jjk"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 3835, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m7hw"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 4474, 1142, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnjh3"]
+atlas = ExtResource("8_47roo")
+region = Rect2(10, 5113, 1142, 639)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0ysr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckkxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pj7bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n82uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82lgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73gq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgfvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8jjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m7hw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnjh3")
+}],
+"loop": true,
+"name": &"backroundplayer",
+"speed": 1.0
+}]
+
+[node name="levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7y4cr")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(591, 284)
+scale = Vector2(18.84, 18.84)
+texture = ExtResource("2_d4un2")
+
+[node name="UiFlatButton02a4" type="Sprite2D" parent="."]
+position = Vector2(1019, 568)
+scale = Vector2(6.6875, 2.78125)
+texture = ExtResource("7_l7dc3")
+
+[node name="lv1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 25.0
+offset_right = 239.0
+offset_bottom = 125.0
+theme = ExtResource("3_igagp")
+text = "Level 0"
+
+[node name="lv6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 157.0
+offset_right = 902.0
+offset_bottom = 257.0
+theme = ExtResource("3_igagp")
+text = "Under
+Construction"
+script = SubResource("GDScript_3jkfp")
+
+[node name="lv4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 154.0
+offset_right = 462.0
+offset_bottom = 254.0
+theme = ExtResource("5_gqcdg")
+text = "Winterlevel"
+script = ExtResource("6_sfxkl")
+
+[node name="lv3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 926.0
+offset_top = 25.0
+offset_right = 1126.0
+offset_bottom = 125.0
+theme = ExtResource("3_igagp")
+text = "Level 2
+"
+script = ExtResource("5_ccsmv")
+
+[node name="lv2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 24.0
+offset_right = 698.0
+offset_bottom = 124.0
+theme = ExtResource("3_igagp")
+text = "Level 1"
+script = ExtResource("6_60lg6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(366, 59.5)
+scale = Vector2(1.34375, 1.27083)
+texture = ExtResource("4_5iidf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(800, 61)
+scale = Vector2(1.14583, 1.125)
+texture = ExtResource("4_5iidf")
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 539.0
+offset_right = 246.0
+offset_bottom = 634.0
+theme = ExtResource("3_igagp")
+text = "Back"
+
+[node name="multi" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 364.0
+offset_right = 608.0
+offset_bottom = 459.0
+theme = ExtResource("3_igagp")
+text = "Multi"
+
+[node name="local" type="Button" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 383.0
+offset_right = 845.0
+offset_bottom = 478.0
+theme = ExtResource("3_igagp")
+text = "local
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = 233.0
+offset_right = 460.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.344139, 0.261703, 0.0656895, 1)
+theme_override_fonts/font = ExtResource("9_d42ix")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(578, 326)
+scale = Vector2(1.01226, 1.02113)
+sprite_frames = SubResource("SpriteFrames_d0ysr")
+animation = &"backroundplayer"
+autoplay = "backroundplayer"
+frame_progress = 0.50887
+
+[connection signal="pressed" from="lv1" to="." method="_on_lv_1_pressed"]
+[connection signal="pressed" from="lv4" to="." method="_on_lv_4_pressed"]
+[connection signal="pressed" from="lv3" to="." method="_on_lv_3_pressed"]
+[connection signal="pressed" from="lv2" to="." method="_on_lv_2_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="multi" to="." method="_on_multi_pressed"]
+[connection signal="pressed" from="local" to="." method="_on_local_pressed"]

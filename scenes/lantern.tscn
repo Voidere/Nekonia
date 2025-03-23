@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://rp7v4g4l03qp"]
+
+[ext_resource type="Texture2D" uid="uid://bgn576xr5d6dg" path="res://assets/sewer/lantern/lantern1.png" id="1_wow5d"]
+[ext_resource type="Texture2D" uid="uid://78g32ncuamqu" path="res://assets/sewer/lantern/lantern2.png" id="2_xbl3a"]
+[ext_resource type="Texture2D" uid="uid://bqhrki5utw325" path="res://assets/sewer/lantern/lantern3.png" id="3_nwaa2"]
+[ext_resource type="Texture2D" uid="uid://djm2rr0cb68if" path="res://assets/sewer/lantern/lantern4.png" id="4_56b5g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwa4u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wow5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xbl3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nwaa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_56b5g")
+}],
+"loop": true,
+"name": &"ligma",
+"speed": 7.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_da2jl"]
+offsets = PackedFloat32Array(0.178571, 0.192857, 0.892857)
+colors = PackedColorArray(1, 1, 1, 1, 0.625, 0.625, 0.625, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1w4kl"]
+gradient = SubResource("Gradient_da2jl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[node name="Lantern" type="AnimatedSprite2D"]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_cwa4u")
+animation = &"ligma"
+autoplay = "ligma"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 1, 0.717647, 1)
+texture = SubResource("GradientTexture2D_1w4kl")

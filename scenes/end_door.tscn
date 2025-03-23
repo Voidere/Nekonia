@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://qbvoktsirurv"]
+
+[ext_resource type="Script" uid="uid://diuxou3pgk616" path="res://scripts/end_door.gd" id="1_a03bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxjlx"]
+size = Vector2(1.51515, 2.63158)
+
+[node name="End_door" type="Area2D"]
+scale = Vector2(3.96, 2.28)
+script = ExtResource("1_a03bo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.757576, 1.31579)
+shape = SubResource("RectangleShape2D_nxjlx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

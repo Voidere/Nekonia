@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnto4y1m70g83"]
+
+[ext_resource type="Script" uid="uid://c6gi2gcr3k66c" path="res://scripts/enemybat.gd" id="1_h1nov"]
+[ext_resource type="Texture2D" uid="uid://de6u2pph35x2p" path="res://assets/Bat_Sprite_Sheet.png" id="2_hmntm"]
+[ext_resource type="PackedScene" uid="uid://dbfcjfo66fqvb" path="res://scenes/killzone_2_0.tscn" id="4_o3dmg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utw1l"]
+radius = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ymg6"]
+atlas = ExtResource("2_hmntm")
+region = Rect2(0, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgja1"]
+atlas = ExtResource("2_hmntm")
+region = Rect2(16, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph31p"]
+atlas = ExtResource("2_hmntm")
+region = Rect2(32, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ca46"]
+atlas = ExtResource("2_hmntm")
+region = Rect2(48, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yuyh"]
+atlas = ExtResource("2_hmntm")
+region = Rect2(64, 0, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8v4r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ymg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgja1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph31p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ca46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yuyh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k24qw"]
+radius = 5.0
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_h1nov")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_utw1l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.98, 1)
+sprite_frames = SubResource("SpriteFrames_8v4r1")
+animation = &"run"
+autoplay = "run"
+frame = 3
+frame_progress = 0.609311
+
+[node name="Killzone2_0" parent="." instance=ExtResource("4_o3dmg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2_0"]
+shape = SubResource("CircleShape2D_k24qw")
+
+[node name="Raycastright" type="RayCast2D" parent="."]
+target_position = Vector2(14, 0)
+collision_mask = 2
+
+[node name="Raycastleft" type="RayCast2D" parent="."]
+target_position = Vector2(-16, 0)
+collision_mask = 2

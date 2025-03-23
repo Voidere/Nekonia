@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch3jevjkm8xue"]
+
+[ext_resource type="Script" path="res://MultyplayerController.gd" id="1_0mq68"]
+[ext_resource type="Script" path="res://scripts/server_browser.gd" id="2_laf7x"]
+
+[node name="MultyplayerControll" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0mq68")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 48.0
+offset_right = 314.0
+offset_bottom = 149.0
+text = "HOST
+"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 52.0
+offset_right = 635.0
+offset_bottom = 153.0
+text = "JOIN"
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 54.0
+offset_right = 945.0
+offset_bottom = 155.0
+text = "START
+"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 176.0
+offset_right = 526.0
+offset_bottom = 207.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 176.0
+offset_right = 187.0
+offset_bottom = 211.0
+text = "Name:"
+
+[node name="ServerBrowser" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_laf7x")
+
+[node name="BroadcastTimer" type="Timer" parent="ServerBrowser"]
+
+[node name="Label" type="Label" parent="ServerBrowser"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 175.0
+offset_right = 1084.0
+offset_bottom = 198.0
+text = "Bound to listen Timer:"
+
+[node name="Panel" type="Panel" parent="ServerBrowser"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 267.0
+offset_right = 784.0
+offset_bottom = 588.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ServerBrowser/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="name" type="Label" parent="ServerBrowser/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="ip" type="Label" parent="ServerBrowser/Panel/HBoxContainer"]
+layout_mode = 2
+text = "ip"
+
+[node name="playercount" type="Label" parent="ServerBrowser/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Playercount"
+
+[node name="join" type="Label" parent="ServerBrowser/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Join"
+
+[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Join" to="." method="_on_join_button_down"]
+[connection signal="button_down" from="Start" to="." method="_on_start_game_button_down"]

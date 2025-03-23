@@ -1,0 +1,126 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6hrfo42mhvcq"]
+
+[ext_resource type="Script" uid="uid://4rr8h8x8v2b1" path="res://scripts/news2.gd" id="1_hk1yh"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_bfjuf"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_sct0r"]
+[ext_resource type="FontFile" uid="uid://0nyawcbtrbur" path="res://assets/fonts/PixelOperator8.ttf" id="3_0gads"]
+[ext_resource type="Texture2D" uid="uid://00cfxmx2cpnt" path="res://assets/lig.png" id="5_ikgdm"]
+[ext_resource type="Texture2D" uid="uid://c8jhw3io7qch" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png" id="6_1vl8s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycxia"]
+texture = ExtResource("6_1vl8s")
+region_rect = Rect2(391.94, 103.991, 15.1779, 15.1363)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2mjy0"]
+texture = ExtResource("6_1vl8s")
+region_rect = Rect2(391.86, 103.977, 15.0914, 15.047)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pl0pf"]
+texture = ExtResource("6_1vl8s")
+region_rect = Rect2(391.921, 103.882, 15.2264, 15.1882)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m22vu"]
+texture = ExtResource("6_1vl8s")
+region_rect = Rect2(391.921, 103.886, 15.0165, 15.066)
+
+[node name="Panel" type="Panel"]
+offset_top = 4.0
+offset_right = 435.0
+offset_bottom = 306.0
+scale = Vector2(1.95167, 1.46599)
+size_flags_horizontal = 4
+script = ExtResource("1_hk1yh")
+
+[node name="Label_Description" type="Label" parent="."]
+layout_mode = 2
+offset_left = 165.0
+offset_top = 75.0209
+offset_right = 205.0
+offset_bottom = 98.0209
+theme_override_fonts/font = ExtResource("3_0gads")
+
+[node name="Label_Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 45.0209
+offset_right = 209.0
+offset_bottom = 77.0209
+theme_override_fonts/font = ExtResource("2_bfjuf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 384.0
+offset_bottom = 132.0
+scale = Vector2(0.375648, 0.590574)
+theme = ExtResource("2_sct0r")
+theme_override_fonts/font = ExtResource("3_0gads")
+theme_override_font_sizes/font_size = 30
+text = "
+  0.2.1  ‎   
+ "
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 102.0
+offset_right = 177.0
+offset_bottom = 160.0
+scale = Vector2(0.83294, 0.90484)
+theme = ExtResource("2_sct0r")
+theme_override_fonts/font = ExtResource("3_0gads")
+text = "
+  0.2.0  ‎ 
+ "
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 162.0
+offset_right = 149.0
+offset_bottom = 220.0
+theme = ExtResource("2_sct0r")
+theme_override_fonts/font = ExtResource("3_0gads")
+text = "
+  0.1.1  ‎ 
+ "
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 226.0
+offset_right = 150.0
+offset_bottom = 285.0
+theme = ExtResource("2_sct0r")
+theme_override_fonts/font = ExtResource("3_0gads")
+text = "
+  0.1.0  ‎ 
+ "
+
+[node name="Lig" type="Sprite2D" parent="."]
+position = Vector2(157.301, 156.209)
+scale = Vector2(0.314358, 1.66922)
+texture = ExtResource("5_ikgdm")
+
+[node name="Lig2" type="Sprite2D" parent="."]
+position = Vector2(217.249, 18.0766)
+scale = Vector2(18.5348, 0.164515)
+texture = ExtResource("5_ikgdm")
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 5.0
+offset_right = 429.0
+offset_bottom = 31.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycxia")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2mjy0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_pl0pf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m22vu")
+
+[connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

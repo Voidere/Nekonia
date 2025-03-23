@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6hrfo42mhvcq"]
+
+[ext_resource type="Script" path="res://scripts/news2.gd" id="1_hk1yh"]
+
+[node name="Panel" type="Panel"]
+offset_right = 363.0
+offset_bottom = 252.0
+scale = Vector2(1.95167, 1.46599)
+size_flags_horizontal = 4
+script = ExtResource("1_hk1yh")
+
+[node name="Label_Description" type="Label" parent="."]
+layout_mode = 2
+offset_left = 117.0
+offset_top = 31.311
+offset_right = 157.0
+offset_bottom = 54.311
+
+[node name="Label_Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 1.606
+offset_right = 157.0
+offset_bottom = 24.606
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Bugfixes"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.38859
+offset_top = 52.1853
+offset_right = 115.389
+offset_bottom = 83.1853
+text = "Major Update"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 0.694297
+offset_top = 97.9478
+offset_right = 74.6943
+offset_bottom = 128.948
+text = "Bugfixes"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+offset_left = 1.38859
+offset_top = 140.499
+offset_right = 69.3886
+offset_bottom = 171.499
+text = "Release"
+
+[connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

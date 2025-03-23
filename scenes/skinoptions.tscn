@@ -1,0 +1,163 @@
+[gd_scene load_steps=9 format=3 uid="uid://2bjda3onmg6a"]
+
+[ext_resource type="Script" uid="uid://dio465blfvamc" path="res://scripts/skinoptions.gd" id="1_k3djx"]
+[ext_resource type="Texture2D" uid="uid://d22q6ufgfp213" path="res://assets/back.png" id="2_m2m8h"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="3_rfl1i"]
+[ext_resource type="Texture2D" uid="uid://kgrv3wx4cel" path="res://assets/skinwhitecat.png" id="4_hlvat"]
+[ext_resource type="Texture2D" uid="uid://6c5g5ip3b6da" path="res://assets/skinscat/skinOrangeCat.png" id="5_4n1jk"]
+[ext_resource type="Texture2D" uid="uid://bcqr815eguobq" path="res://assets/skinB.png" id="6_iqa3h"]
+[ext_resource type="Texture2D" uid="uid://dajxqyr638eue" path="res://assets/sigmsil.png" id="7_3drcj"]
+[ext_resource type="Texture2D" uid="uid://bn3av0rjm1hgw" path="res://assets/xmasskin.png" id="8_7rrhp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3djx")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(591, 284)
+scale = Vector2(18.84, 18.84)
+texture = ExtResource("2_m2m8h")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 520.0
+offset_right = 199.0
+offset_bottom = 586.0
+theme = ExtResource("3_rfl1i")
+text = "Back"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 21.0
+offset_right = 338.0
+offset_bottom = 318.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 18.0
+offset_right = 311.0
+offset_bottom = 255.0
+texture = ExtResource("4_hlvat")
+
+[node name="whitecat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 229.0
+offset_right = 315.0
+offset_bottom = 307.0
+theme = ExtResource("3_rfl1i")
+text = "Select WhiteCat"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 20.0
+offset_right = 727.0
+offset_bottom = 318.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 17.0
+offset_right = 705.0
+offset_bottom = 254.0
+texture = ExtResource("5_4n1jk")
+
+[node name="orangecat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 228.0
+offset_right = 709.0
+offset_bottom = 306.0
+theme = ExtResource("3_rfl1i")
+text = "Select OrangeCat"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 15.0
+offset_right = 1093.0
+offset_bottom = 313.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 15.0
+offset_right = 1073.0
+offset_bottom = 252.0
+texture = ExtResource("6_iqa3h")
+
+[node name="blackcat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 226.0
+offset_right = 1090.0
+offset_bottom = 304.0
+theme = ExtResource("3_rfl1i")
+text = "Select 	BlackCat"
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 328.0
+offset_right = 909.0
+offset_bottom = 626.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 346.0
+offset_right = 869.0
+offset_bottom = 558.0
+scale = Vector2(1.08, 1)
+texture = ExtResource("7_3drcj")
+
+[node name="sylvester" type="Button" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 539.0
+offset_right = 893.0
+offset_bottom = 617.0
+theme = ExtResource("3_rfl1i")
+text = "Select 
+SylvesterCat"
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 328.0
+offset_right = 550.0
+offset_bottom = 626.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 344.0
+offset_right = 535.0
+offset_bottom = 581.0
+scale = Vector2(0.906302, 0.906302)
+texture = ExtResource("8_7rrhp")
+
+[node name="wintercat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 539.0
+offset_right = 534.0
+offset_bottom = 617.0
+theme = ExtResource("3_rfl1i")
+text = "Select WinterCat"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://coocej1kutjsb"]
+
+[ext_resource type="Script" uid="uid://cfbfvjg5shmkf" path="res://scenes/enemy_ratte.gd" id="1_38c5a"]
+[ext_resource type="Texture2D" uid="uid://c6c7hsfdw11ud" path="res://assets/rat sewer tile set/ratz_run.png" id="2_c0b7g"]
+[ext_resource type="PackedScene" uid="uid://dbfcjfo66fqvb" path="res://scenes/killzone_2_0.tscn" id="4_si8oc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyykj"]
+atlas = ExtResource("2_c0b7g")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb0gf"]
+atlas = ExtResource("2_c0b7g")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8on85"]
+atlas = ExtResource("2_c0b7g")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjjiu"]
+atlas = ExtResource("2_c0b7g")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mw1fy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyykj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb0gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8on85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjjiu")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkwow"]
+size = Vector2(57, 16)
+
+[node name="Enemy Ratte" type="Node2D"]
+script = ExtResource("1_38c5a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -2.0625)
+scale = Vector2(0.945313, 0.941406)
+sprite_frames = SubResource("SpriteFrames_mw1fy")
+animation = &"run"
+autoplay = "run"
+frame = 2
+frame_progress = 0.841559
+
+[node name="Killzone2_0" parent="." instance=ExtResource("4_si8oc")]
+position = Vector2(-14, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2_0"]
+position = Vector2(16, 1)
+shape = SubResource("RectangleShape2D_tkwow")
+
+[node name="raycastright" type="RayCast2D" parent="."]
+target_position = Vector2(36, 0)
+collision_mask = 4
+
+[node name="raycastleft" type="RayCast2D" parent="."]
+target_position = Vector2(-32, 0)
+collision_mask = 4
