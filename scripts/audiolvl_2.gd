@@ -14,7 +14,7 @@ func _ready():
 		music_player = AudioStreamPlayer.new()
 		music_player.bus = "Music"
 		add_child(music_player)
-		music_player.stream = preload("res://assets/sounds/music/04 - Zazou ft. Trippin Jaguar - Octagon 16_44100 Mastered v3.wav")
+		music_player.stream = preload("res://assets/sounds/music/04-Zazou-ft.-Trippin-Jaguar-Octagon-16_44100-Mastered-v3.mp3")
 
 	# Correctly connect the signals to the functions
 	connect("play_music", Callable(self, "_on_play_music"))

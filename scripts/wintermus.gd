@@ -12,7 +12,7 @@ func _ready():
 	if not music_player:
 		music_player = AudioStreamPlayer.new()
 		add_child(music_player)
-		music_player.stream = preload("res://assets/sounds/music/4. Constantihn Lange - Timelapse.wav")
+		music_player.stream = preload("res://assets/sounds/music/4.-Constantihn-Lange-Timelapse.mp3")
 
 	# Correctly connect the signals to the functions
 	# `self` refers to the current instance (music manager)

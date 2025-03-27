@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vmvsr8s0xyrl"
+path="res://.godot/imported/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3-d91754b05452b22f82d781ea2952d540.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3"
+dest_files=["res://.godot/imported/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3-d91754b05452b22f82d781ea2952d540.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

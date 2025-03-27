@@ -21,7 +21,7 @@
 [ext_resource type="Script" uid="uid://08t3qmkj3lvd" path="res://scripts/game_manager3.gd" id="17_4772b"]
 [ext_resource type="Script" uid="uid://c1jrgejew0yih" path="res://scripts/pickups/pickup14.gd" id="18_dab5t"]
 [ext_resource type="PackedScene" uid="uid://euimrmjjxn4l" path="res://scenes/ladder.tscn" id="21_wdnm1"]
-[ext_resource type="AudioStream" uid="uid://b44wisi35x614" path="res://assets/sounds/music/6. Constantihn Lange - Curious Minds.wav" id="22_x0l70"]
+[ext_resource type="AudioStream" uid="uid://y87md6jy4cjw" path="res://assets/sounds/music/6.-Constantihn-Lange-Curious-Minds.mp3" id="22_xwks1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5c2oa"]
 texture = ExtResource("1_uon1f")
@@ -7622,7 +7622,7 @@ position = Vector2(1895, -750)
 scale = Vector2(0.64, 4.96163)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_x0l70")
+stream = ExtResource("22_xwks1")
 volume_db = -16.865
 autoplay = true
 bus = &"Music"
