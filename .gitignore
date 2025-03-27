@@ -5,6 +5,9 @@
 #vscode
 .vscode
 
+#Export Presets
 export_presets.cfg
 
+#Environment
 .env
+
