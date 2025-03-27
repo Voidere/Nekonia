@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://guq8e1qqqukv" path="res://scripts/npc.gd" id="12_juo1t"]
 [ext_resource type="PackedScene" uid="uid://qbvoktsirurv" path="res://scenes/end_door.tscn" id="14_70se3"]
 [ext_resource type="Script" uid="uid://cux72uwihvlqp" path="res://scripts/end_door2.gd" id="15_c6dt2"]
-[ext_resource type="AudioStream" uid="uid://b5jq2q3fq74an" path="res://assets/sounds/music/1 - Geplantes Nichtstun - Schub (Original Mix).wav" id="16_ly38m"]
+[ext_resource type="AudioStream" uid="uid://ctae6g7wibg2b" path="res://assets/sounds/music/1-Geplantes-Nichtstun-Schub-_Original-Mix_.mp3" id="16_ly38m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fusqy"]
 texture = ExtResource("2_f6jds")
