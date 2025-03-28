@@ -24,7 +24,9 @@ Global="*res://scripts/global.gd"
 LevelManager="*res://scripts/level_manager.gd"
 Audiolvl2="*res://scripts/audiolvl_2.gd"
 Wintermus="*res://scripts/wintermus.gd"
-GameServerManager="*res://multiplayer/scripts/GameServerManager.gd"
+MQttClient2="*res://multiplayerv2/scripts/MQTTClient2.gd"
+GameServerManager="*res://multiplayerv2/scripts/GameServerManager.gd"
+MQTTClient="*res://addons/mqtt/mqtt.gd"
 
 [display]
 
