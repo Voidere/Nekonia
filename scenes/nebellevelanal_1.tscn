@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://du55an2ft21br"]
+[gd_scene load_steps=26 format=4 uid="uid://du55an2ft21br"]
 
 [ext_resource type="Texture2D" uid="uid://c6s1rx0yypggc" path="res://assets/rat sewer tile set/trickle.png" id="1_clh2e"]
 [ext_resource type="Texture2D" uid="uid://b48vk6idlnjmk" path="res://assets/rat sewer tile set/Sewer tileset.png" id="2_qnekk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://vikreumcls3c" path="res://assets/Kanalisation.png" id="5_rhn3r"]
 [ext_resource type="PackedScene" uid="uid://coocej1kutjsb" path="res://scenes/enemy_ratte.tscn" id="6_64o0u"]
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="7_gxs5u"]
+[ext_resource type="PackedScene" uid="uid://rp7v4g4l03qp" path="res://scenes/lantern.tscn" id="9_t5fia"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7ivt"]
 texture = ExtResource("1_clh2e")
@@ -1357,3 +1358,7 @@ position = Vector2(104, -9)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3.5, 3.5)
+
+[node name="Lantern" parent="." instance=ExtResource("9_t5fia")]
+position = Vector2(174, -8)
+frame_progress = 0.76336

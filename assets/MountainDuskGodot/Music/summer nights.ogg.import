@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://lfkxxo68r08r"
-path="res://.godot/imported/summer nights.ogg-03559fa8e2b538ea1ce754f9ca7cf919.oggvorbisstr"
+path="res://.godot/imported/summer nights.ogg-3eed46ce524bb8592c3399b911f9714a.oggvorbisstr"
 
 [deps]
 
-source_file="res://Music/summer nights.ogg"
-dest_files=["res://.godot/imported/summer nights.ogg-03559fa8e2b538ea1ce754f9ca7cf919.oggvorbisstr"]
+source_file="res://assets/MountainDuskGodot/Music/summer nights.ogg"
+dest_files=["res://.godot/imported/summer nights.ogg-3eed46ce524bb8592c3399b911f9714a.oggvorbisstr"]
 
 [params]
 

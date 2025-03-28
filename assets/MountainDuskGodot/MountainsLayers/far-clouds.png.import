@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbw3l7ns3qacb"
-path="res://.godot/imported/far-clouds.png-8020433bd01f703b0a847e174f4f3b22.ctex"
+path="res://.godot/imported/far-clouds.png-2fe38bf69d68b351fcfbfc6ee488a7bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MountainsLayers/far-clouds.png"
-dest_files=["res://.godot/imported/far-clouds.png-8020433bd01f703b0a847e174f4f3b22.ctex"]
+source_file="res://assets/MountainDuskGodot/MountainsLayers/far-clouds.png"
+dest_files=["res://.godot/imported/far-clouds.png-2fe38bf69d68b351fcfbfc6ee488a7bc.ctex"]
 
 [params]
 
