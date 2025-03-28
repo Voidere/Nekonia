@@ -3444,7 +3444,7 @@ scale = Vector2(1.19044, 1.10463)
 frame_progress = 0.770472
 
 [node name="Lantern8" parent="." instance=ExtResource("17_hp14q")]
-position = Vector2(99, -27)
+position = Vector2(99, -41)
 scale = Vector2(1.19044, 1.10463)
 frame_progress = 0.770472
 
