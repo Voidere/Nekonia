@@ -2112,56 +2112,64 @@ position = Vector2(104, -9)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3.5, 3.5)
 
-[node name="Lantern" parent="." instance=ExtResource("9_t5fia")]
-position = Vector2(172, -7)
-frame_progress = 0.76336
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.54
+blend_mode = 1
 
-[node name="Lantern" parent="Lantern" instance=ExtResource("9_t5fia")]
-position = Vector2(-228, -17)
-frame_progress = 0.76336
+[node name="water" type="Node" parent="."]
 
-[node name="Lantern" parent="Lantern/Lantern" instance=ExtResource("9_t5fia")]
-position = Vector2(112, -80)
-frame_progress = 0.76336
-
-[node name="water1" type="AnimatedSprite2D" parent="."]
+[node name="water1" type="AnimatedSprite2D" parent="water"]
 position = Vector2(0, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.834699
 
-[node name="water2" type="AnimatedSprite2D" parent="water1"]
-position = Vector2(160, 0)
+[node name="water2" type="AnimatedSprite2D" parent="water"]
+position = Vector2(160, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.555531
 
-[node name="water3" type="AnimatedSprite2D" parent="water1/water2"]
-position = Vector2(32, 0)
+[node name="water3" type="AnimatedSprite2D" parent="water"]
+position = Vector2(192, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.453703
 
-[node name="water4" type="AnimatedSprite2D" parent="water1/water2/water3"]
-position = Vector2(352, 0)
+[node name="water4" type="AnimatedSprite2D" parent="water"]
+position = Vector2(544, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.673755
 
-[node name="water5" type="AnimatedSprite2D" parent="water1/water2/water3/water4"]
-position = Vector2(32, 0)
+[node name="water5" type="AnimatedSprite2D" parent="water"]
+position = Vector2(576, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.875311
 
-[node name="water6" type="AnimatedSprite2D" parent="water1/water2/water3/water4/water5"]
-position = Vector2(32, 0)
+[node name="water6" type="AnimatedSprite2D" parent="water"]
+position = Vector2(608, 24)
 sprite_frames = SubResource("SpriteFrames_vvs4p")
 animation = &"water 1"
 autoplay = "water 1"
 frame_progress = 0.297365
+
+[node name="lantern" type="Node" parent="."]
+
+[node name="Lantern" parent="lantern" instance=ExtResource("9_t5fia")]
+position = Vector2(172, -7)
+frame_progress = 0.76336
+
+[node name="Lantern2" parent="lantern" instance=ExtResource("9_t5fia")]
+position = Vector2(-56, -24)
+frame_progress = 0.76336
+
+[node name="Lantern3" parent="lantern" instance=ExtResource("9_t5fia")]
+position = Vector2(56, -104)
+frame_progress = 0.76336
