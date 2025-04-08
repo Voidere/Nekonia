@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://du55an2ft21br"]
+[gd_scene load_steps=50 format=4 uid="uid://du55an2ft21br"]
 
 [ext_resource type="Texture2D" uid="uid://b57e2jf03it7v" path="res://assets/Buildings.png" id="1_1xu4r"]
 [ext_resource type="Texture2D" uid="uid://c6s1rx0yypggc" path="res://assets/rat sewer tile set/trickle.png" id="1_clh2e"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="7_gxs5u"]
 [ext_resource type="Texture2D" uid="uid://b0lcugaej54p" path="res://assets/sewer water float.png" id="7_lt0no"]
 [ext_resource type="PackedScene" uid="uid://rp7v4g4l03qp" path="res://scenes/lantern.tscn" id="9_t5fia"]
-[ext_resource type="Texture2D" uid="uid://culwkov5eudho" path="res://assets/hanging lamp.png" id="14_s2f14"]
 [ext_resource type="Texture2D" uid="uid://bmbousampck80" path="res://assets/Hanging Lamp 2.png" id="15_m441y"]
 [ext_resource type="PackedScene" uid="uid://euimrmjjxn4l" path="res://scenes/ladder.tscn" id="17_s2f14"]
 
@@ -1883,10 +1882,6 @@ texture = ExtResource("4_lt0no")
 4:8/0 = 0
 5:8/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xca6o"]
-texture = ExtResource("14_s2f14")
-0:0/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vm024"]
 texture = ExtResource("15_m441y")
 0:0/0 = 0
@@ -1898,7 +1893,6 @@ sources/1 = SubResource("TileSetAtlasSource_xpfhj")
 sources/2 = SubResource("TileSetAtlasSource_gtrln")
 sources/3 = SubResource("TileSetAtlasSource_hm5uj")
 sources/4 = SubResource("TileSetAtlasSource_vvs4p")
-sources/6 = SubResource("TileSetAtlasSource_xca6o")
 sources/7 = SubResource("TileSetAtlasSource_vm024")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3w2dn"]
