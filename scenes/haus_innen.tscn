@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://dpa1tcuusv3cd"]
+[gd_scene load_steps=56 format=4 uid="uid://dpa1tcuusv3cd"]
 
 [ext_resource type="Script" uid="uid://dvjv2c3g3rb52" path="res://scripts/haus_innen.gd" id="1_aadap"]
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="1_nqjs0"]
@@ -2342,6 +2342,16 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koj7h"]
 size = Vector2(15, 14.6073)
 
+[sub_resource type="Gradient" id="Gradient_nc6tc"]
+offsets = PackedFloat32Array(0.492857, 0.65, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.575001, 0.575001, 0.575001, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1awbh"]
+gradient = SubResource("Gradient_nc6tc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.916667, 0.0686275)
+
 [node name="Haus_innen" type="Node2D"]
 script = ExtResource("1_aadap")
 
@@ -2357,6 +2367,7 @@ position_smoothing_speed = 10.0
 script = SubResource("GDScript_wrvhm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("3_ak1uf")]
 anchors_preset = 8
@@ -2367,6 +2378,7 @@ anchor_bottom = 0.5
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player"]
+visible = false
 
 [node name="openedletter" type="Node2D" parent="Player/CanvasLayer2"]
 position = Vector2(428, 367)
@@ -2443,7 +2455,7 @@ script = ExtResource("18_4o24m")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="brief"]
 libraries = {
-"": SubResource("AnimationLibrary_nogyb")
+&"": SubResource("AnimationLibrary_nogyb")
 }
 autoplay = "itembrieg"
 
@@ -2462,6 +2474,12 @@ position = Vector2(1161, -80)
 scale = Vector2(1, 4.76077)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="red4" type="PointLight2D" parent="."]
+position = Vector2(-65, -178)
+scale = Vector2(0.30957, 0.304688)
+color = Color(4.71681e-06, 0.507027, 0.694714, 1)
+texture = SubResource("GradientTexture2D_1awbh")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="brief/Area2D" to="." method="_on_area_2d_body_entered"]

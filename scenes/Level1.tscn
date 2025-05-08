@@ -44,7 +44,7 @@
 [ext_resource type="Script" uid="uid://2bv5aklg6bwh" path="res://scripts/pickups/pickup10.gd" id="48_2icac"]
 [ext_resource type="Script" uid="uid://b8xbrdct10pgc" path="res://scripts/pickups/pickup11.gd" id="49_66nn3"]
 [ext_resource type="Script" uid="uid://b0u0yepyrj3xn" path="res://scripts/pickups/pickup12.gd" id="50_82kr8"]
-[ext_resource type="AudioStream" uid="uid://vmvsr8s0xyrl" path="res://assets/sounds/musicmp3/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3" id="51_0nv2s"]
+[ext_resource type="AudioStream" uid="uid://vmvsr8s0xyrl" path="res://assets/sounds/music/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3" id="51_0nv2s"]
 
 [sub_resource type="GDScript" id="GDScript_ol3bp"]
 script/source = "extends Camera2D
@@ -10206,23 +10206,23 @@ sources/1 = SubResource("TileSetAtlasSource_8ftlw")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7ow8t"]
 distance = -169.0
 
-[sub_resource type="Gradient" id="Gradient_tc1bu"]
+[sub_resource type="Gradient" id="Gradient_p72f1"]
 offsets = PackedFloat32Array(0, 0.242857, 0.45, 0.614286, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.321429, 0.321429, 0.321429, 1, 0.045, 0.045, 0.045, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_b10gx"]
-gradient = SubResource("Gradient_tc1bu")
+gradient = SubResource("Gradient_p72f1")
 height = 72
 fill = 2
 fill_from = Vector2(0.47549, 0)
 fill_to = Vector2(0.455882, 0.732026)
 
-[sub_resource type="Gradient" id="Gradient_vxxe2"]
+[sub_resource type="Gradient" id="Gradient_hv2un"]
 offsets = PackedFloat32Array(0.492857, 0.65, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.575001, 0.575001, 0.575001, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_c5ktu"]
-gradient = SubResource("Gradient_vxxe2")
+gradient = SubResource("Gradient_hv2un")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.916667, 0.0686275)
@@ -10249,6 +10249,7 @@ position_smoothing_speed = 4.0
 script = SubResource("GDScript_ol3bp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("4_jwvsr")]
 anchors_preset = 8
