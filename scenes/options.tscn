@@ -21,7 +21,6 @@ scale = Vector2(18.84, 18.84)
 texture = ExtResource("4_21jhf")
 
 [node name="back" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 36.0
 offset_top = 535.0
