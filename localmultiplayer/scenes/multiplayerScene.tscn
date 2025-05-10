@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dddvhbvtg8x5j"]
+[gd_scene load_steps=4 format=3 uid="uid://bwtcufnykv2gk"]
 
-[ext_resource type="Script" uid="uid://cybrkp5aib52g" path="res://multiplayer/scripts/MutiplayerController.gd" id="1_fy4ev"]
-[ext_resource type="Script" uid="uid://bact61yfomra4" path="res://multiplayer/scripts/ServerBrowser.gd" id="2_quh5b"]
-[ext_resource type="PackedScene" uid="uid://dpqlhqyadbpvs" path="res://multiplayer/scenes/server_info.tscn" id="3_blfv7"]
+[ext_resource type="Script" uid="uid://cybrkp5aib52g" path="res://localmultiplayer/scripts/MutiplayerController.gd" id="1_omkav"]
+[ext_resource type="Script" uid="uid://bact61yfomra4" path="res://localmultiplayer/scripts/ServerBrowser.gd" id="2_njv3o"]
+[ext_resource type="PackedScene" uid="uid://dpqlhqyadbpvs" path="res://localmultiplayer/scenes/server_info.tscn" id="3_jpahl"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fy4ev")
+script = ExtResource("1_omkav")
 
 [node name="Host" type="Button" parent="."]
 layout_mode = 0
@@ -23,10 +23,10 @@ text = "Host"
 
 [node name="Join" type="Button" parent="."]
 layout_mode = 0
-offset_left = 288.0
-offset_top = -93.0
-offset_right = 465.0
-offset_bottom = -45.0
+offset_left = 270.0
+offset_top = 120.0
+offset_right = 447.0
+offset_bottom = 168.0
 text = "Join"
 
 [node name="StartGame" type="Button" parent="."]
@@ -56,26 +56,26 @@ text = "Name"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("2_quh5b")
-serverInfo = ExtResource("3_blfv7")
+script = ExtResource("2_njv3o")
+serverInfo = ExtResource("3_jpahl")
 
 [node name="BroadcastTimer" type="Timer" parent="ServerBrowser"]
 
 [node name="Label2" type="Label" parent="ServerBrowser"]
 layout_mode = 0
-offset_left = 890.0
-offset_top = 26.0
-offset_right = 1137.0
-offset_bottom = 78.0
+offset_left = 816.0
+offset_top = 42.0
+offset_right = 1063.0
+offset_bottom = 94.0
 text = "Bound To 
 Listen Port: "
 
 [node name="Panel" type="Panel" parent="ServerBrowser"]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 248.0
-offset_right = 687.0
-offset_bottom = 580.0
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 771.0
+offset_bottom = 588.0
 
 [node name="ServerInfo2" type="HBoxContainer" parent="ServerBrowser/Panel"]
 layout_mode = 2
@@ -111,10 +111,10 @@ offset_bottom = 329.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 890.0
-offset_top = 102.0
-offset_right = 1115.0
-offset_bottom = 171.0
+offset_left = 831.0
+offset_top = 110.0
+offset_right = 1056.0
+offset_bottom = 179.0
 text = "test add player (host)"
 
 [connection signal="button_down" from="Host" to="." method="_on_host_button_down"]

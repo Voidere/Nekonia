@@ -195,7 +195,7 @@ offset_top = 364.0
 offset_right = 608.0
 offset_bottom = 459.0
 theme = ExtResource("3_igagp")
-text = "Multi"
+text = "Multiplayer"
 
 [node name="local" type="Button" parent="."]
 layout_mode = 0
@@ -204,8 +204,7 @@ offset_top = 383.0
 offset_right = 845.0
 offset_bottom = 478.0
 theme = ExtResource("3_igagp")
-text = "local
-"
+text = "LocalMultiplayer"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

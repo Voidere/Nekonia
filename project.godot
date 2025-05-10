@@ -25,6 +25,7 @@ LevelManager="*res://scripts/level_manager.gd"
 Audiolvl2="*res://scripts/audiolvl_2.gd"
 Wintermus="*res://scripts/wintermus.gd"
 MQTTClient="*res://addons/mqtt/mqtt.gd"
+GameServerManager="*res://localmultiplayer/scripts/GameServerManager.gd"
 
 [display]
 
@@ -43,8 +44,8 @@ folder_colors={
 "res://Icons/": "blue",
 "res://Levels/": "orange",
 "res://assets/": "green",
-"res://multiplayer/": "orange",
-"res://multiplayerv2/": "purple",
+"res://localmultiplayer/": "orange",
+"res://multiplayermqtt/": "purple",
 "res://scenes/": "yellow",
 "res://script/": "green",
 "res://scripts/": "red"
