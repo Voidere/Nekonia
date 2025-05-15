@@ -50,7 +50,7 @@ func _on_lv_4_pressed() -> void:
 
 
 func _on_multi_pressed() -> void:
-	get_tree().change_scene_to_file("res://multiplayerv2/mainmenu.tscn")
+	get_tree().change_scene_to_file("res://multiplayermqtt/mainmenu.tscn")
 
 
 func _on_local_pressed() -> void:
