@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxhvd3jf1eaxm"]
+
+[ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="1_m2lpg"]
+
+[node name="neben_kanal_keno" type="Node2D"]
+
+[node name="floor" type="TileMap" parent="."]
+format = 2
+
+[node name="backround" type="TileMapLayer" parent="."]
+
+[node name="rest" type="TileMapLayer" parent="."]
+
+[node name="details" type="TileMapLayer" parent="rest"]
+
+[node name="Player" parent="." instance=ExtResource("1_m2lpg")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
