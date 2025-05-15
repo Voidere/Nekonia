@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://bph58syqnhrpp"]
+[gd_scene load_steps=2 format=3 uid="uid://bph58syqnhrpp"]
 
-[ext_resource type="Script" uid="uid://dlmef22ro68ks" path="res://multiplayermqtt/mainmenu.gd" id="1_akucu"]
 [ext_resource type="PackedScene" uid="uid://cfmoahalri06d" path="res://addons/player-networking/NetworkGateway.tscn" id="1_l42xx"]
 
 [node name="mainmenu" type="Control"]
@@ -10,7 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_akucu")
 
 [node name="NetworkGateway" parent="." instance=ExtResource("1_l42xx")]
 layout_mode = 0
@@ -18,13 +16,3 @@ offset_left = 126.0
 offset_top = 132.0
 offset_right = 808.0
 offset_bottom = 520.0
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 348.0
-offset_top = 429.0
-offset_right = 418.0
-offset_bottom = 460.0
-text = "connect"
-
-[connection signal="toggled" from="Button" to="." method="_on_connect_toggled"]

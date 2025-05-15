@@ -16,7 +16,7 @@ var health = 3
 
 func _ready():
 	Global.connect("skin_equip_requested", Callable(self, "_on_skin_equip_requested"))
-	change_skin(Global.current_skin)  # Start with the current global skin
+	change_skin(Global.current_skin) 
 	if hearts_parent:
 		for child in hearts_parent.get_children():
 			hearts_list.append(child)
@@ -47,11 +47,6 @@ func change_skin(skin: String):
 			animated_sprite.frames = preload("res://assets/game/player5.tres")
 			animated_sprite.play("idle")
 
-# Player script
-func _on_player_died():
-	Global.is_alive = false  # Prevent further coin collection
-	animated_sprite.play("die")
-
 
 func _physics_process(delta: float) -> void:
 	if onLadder:
@@ -68,11 +63,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
-	
-	#flip idiot
+
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:
@@ -94,15 +86,3 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
-func take_damage():
-	if health > 0:
-		health -= 1
-		print("mon")
-		animated_sprite.play("take_damage")
-		update_heart_display()
-
-func update_heart_display():
-	for i in range(hearts_list.size()):
-		hearts_list[i].visible = i < health

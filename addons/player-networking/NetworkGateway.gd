@@ -88,6 +88,7 @@ func initialstatemqttwebrtc(networkoption, roomname, brokeraddress):
 	if roomname:
 		MQTTsignalling.Roomnametext.text = roomname
 	selectandtrigger_networkoption(networkoption)
+	#set_vox_on()
 
 func selectandtrigger_networkoption(networkoption):
 	if ProtocolOptions.selected == NETWORK_PROTOCOL.WEBRTC_MQTTSIGNAL:
@@ -98,6 +99,7 @@ func selectandtrigger_networkoption(networkoption):
 		if NetworkOptions.selected != networkoption:
 			NetworkOptions.selected = networkoption
 			_on_NetworkOptions_item_selected(networkoption)
+	#set_vox_on()
 
 func _on_ProtocolOptions_item_selected(np):
 	assert (NetworkOptions.selected == NETWORK_OPTIONS.NETWORK_OFF or NetworkOptions.selected == -1)
@@ -231,6 +233,13 @@ func setnetworkoff():
 func _data_channel_received(channel: Object):
 	print("_data_channel_received ", channel)
 
+func set_vox_on():
+	var RecordingFeature = PlayerConnections.get_node("VBox/RecordingFeature")
+	RecordingFeature.get_node("Vox").button_pressed = true
+	var voxthreshold = 0.06
+	RecordingFeature.voxthreshhold = voxthreshold
+	RecordingFeature.get_node("VoxThreshold").material.set_shader_parameter("voxthreshhold", voxthreshold)
+
 func is_disconnected():
 	return Dconnectedplayerscount == 0
 
@@ -243,6 +252,7 @@ func simple_webrtc_connect(roomname):
 	if roomname:
 		MQTTsignalling.Roomnametext.text = roomname
 		selectandtrigger_networkoption(NETWORK_OPTIONS_MQTT_WEBRTC.AS_NECESSARY)
+		set_vox_on()
 	else:
 		selectandtrigger_networkoption(NETWORK_OPTIONS.NETWORK_OFF)
 

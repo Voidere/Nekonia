@@ -11,3 +11,5 @@ export_presets.cfg
 #Environment
 .env
 
+#Folder Icon
+desktop.ini
