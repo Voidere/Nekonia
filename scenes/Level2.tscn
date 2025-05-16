@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://crlkl6dfq8g0l"]
+[gd_scene load_steps=31 format=4 uid="uid://crlkl6dfq8g0l"]
 
 [ext_resource type="Script" uid="uid://dil866ws511uy" path="res://scripts/jungels_level_2.gd" id="1_oe8kb"]
 [ext_resource type="Texture2D" uid="uid://cgtr66xjfjrxy" path="res://assets/jungles.png" id="1_u8h52"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://crbm855fecjrp" path="res://scripts/pickups/pickup15.gd" id="17_vb05f"]
 [ext_resource type="Script" uid="uid://iqi1k3jtcepb" path="res://scripts/pickups/pickup16.gd" id="18_qth4d"]
 [ext_resource type="PackedScene" uid="uid://cl5frbyt323fk" path="res://scenes/platform_2.tscn" id="21_epefj"]
+[ext_resource type="PackedScene" uid="uid://dqb7oycrvudby" path="res://scenes/platform.tscn" id="22_24quv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vr4rw"]
 distance = -2.46356
@@ -2825,6 +2826,16 @@ scale = Vector2(0.32, 1)
 z_index = -1
 position = Vector2(850, -551)
 scale = Vector2(0.32, 1)
+
+[node name="Platform3" parent="." instance=ExtResource("22_24quv")]
+z_index = 2
+position = Vector2(-29, -53)
+scale = Vector2(1.48, 1)
+
+[node name="Platform4" parent="." instance=ExtResource("22_24quv")]
+z_index = 2
+position = Vector2(-155, -326)
+scale = Vector2(0.96, 1)
 
 [connection signal="body_entered" from="End_door" to="." method="_on_end_door_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
