@@ -1,7 +1,7 @@
 extends Control
 
 @export var Address = get_env_var("IP_ADDRESS")
-@export var port = get_env_var("PORT").to_int()
+@export var port: int = 8910
 var peer
 
 func _ready():

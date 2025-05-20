@@ -13,3 +13,4 @@ export_presets.cfg
 
 #Folder Icon
 desktop.ini
+addons/webrtc/lib/~libwebrtc_native.windows.template_debug.x86_64.dll
