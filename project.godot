@@ -46,7 +46,7 @@ folder_colors={
 "res://assets/": "green",
 "res://localmultiplayer/": "orange",
 "res://multiplayermqtt/": "purple",
-"res://multiplayerv3/": "pink",
+"res://multiplayerwebsocket/": "pink",
 "res://scenes/": "yellow",
 "res://script/": "green",
 "res://scripts/": "red"

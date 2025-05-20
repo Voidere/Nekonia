@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccp7a5trw734p"]
+
+[ext_resource type="Script" uid="uid://cl1cnu2tcpg31" path="res://localmultiplayer/player/player.gd" id="1_uo8rl"]
+[ext_resource type="SpriteFrames" uid="uid://b8ibgp5q37n5p" path="res://assets/game/player1.tres" id="2_7pfuv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kjrdw"]
+radius = 7.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_si0n2"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_uo8rl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kjrdw")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_si0n2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.5, -0.5)
+scale = Vector2(0.96875, 0.96875)
+sprite_frames = ExtResource("2_7pfuv")
+animation = &"idle"

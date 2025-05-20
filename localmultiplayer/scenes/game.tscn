@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=4 uid="uid://buqiyr5f5b2gn"]
+
+[ext_resource type="Script" uid="uid://bm0025oo32ipl" path="res://localmultiplayer/scripts/game.gd" id="1_2kk1u"]
+[ext_resource type="Texture2D" uid="uid://bbw3l7ns3qacb" path="res://assets/MountainDuskGodot/MountainsLayers/far-clouds.png" id="2_8cdo8"]
+[ext_resource type="Texture2D" uid="uid://bcnsdxg457gf4" path="res://assets/MountainDuskGodot/MountainsLayers/far-mountains.png" id="2_oa67o"]
+[ext_resource type="Texture2D" uid="uid://dwrfvfjdv5jpt" path="res://localmultiplayer/tileset.png" id="2_pfyvi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwohc"]
+texture = ExtResource("2_pfyvi")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_66pxm"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wwohc")
+
+[node name="Game" type="Node"]
+script = ExtResource("1_2kk1u")
+
+[node name="Far-clouds" type="Sprite2D" parent="."]
+position = Vector2(142, 24)
+scale = Vector2(5.55469, 1.55)
+texture = ExtResource("2_8cdo8")
+
+[node name="Far-mountains" type="Sprite2D" parent="."]
+position = Vector2(156, 25)
+scale = Vector2(3.61875, 1.34167)
+texture = ExtResource("2_oa67o")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAcAAAAAAAAAAAAPAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAQAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAASAAUAAAAAAAAAAAASAAQAAAAAAAAAAAATAAQAAAAAAAAAAAAZAAUAAAAAAAAAAAAaAAUAAAAAAAAAAAAbAAUAAAAAAAAAAAAcAAUAAAAAAAAAAAAdAAUAAAAAAAAAAAAeAAUAAAAAAAAAAAAdAAYAAAAAAAAAAAAcAAYAAAAAAAAAAAAbAAYAAAAAAAAAAAAaAAYAAAAAAAAAAAABAAkAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAD//wgAAAAAAAAAAAD+/wgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_66pxm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(125, 40)
+zoom = Vector2(4, 4)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://ccp7a5trw734p")
+spawn_path = NodePath("..")
