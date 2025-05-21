@@ -1055,7 +1055,6 @@ position_smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
 [node name="pause_menu" parent="Player/CanvasLayer" instance=ExtResource("2_eneth")]
-visible = false
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player"]
 
@@ -1075,7 +1074,6 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="end_pop" parent="CanvasLayer" instance=ExtResource("9_2t4x8")]
 
