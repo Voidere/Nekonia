@@ -20,6 +20,5 @@ frame = 3
 frame_progress = 0.197759
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-visible = false
 scale = Vector2(1.05, 1.05)
 shape = SubResource("CircleShape2D_yvqxj")
