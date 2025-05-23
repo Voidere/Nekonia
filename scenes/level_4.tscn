@@ -2231,12 +2231,12 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_cooxj"]
+[sub_resource type="Gradient" id="Gradient_kqmrt"]
 offsets = PackedFloat32Array(0.571429, 0.857143)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tkyil"]
-gradient = SubResource("Gradient_cooxj")
+gradient = SubResource("Gradient_kqmrt")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -2318,12 +2318,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_q41qf"]
+[sub_resource type="Gradient" id="Gradient_u7ckc"]
 offsets = PackedFloat32Array(0, 0.242857, 0.45, 0.614286, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.321429, 0.321429, 0.321429, 1, 0.045, 0.045, 0.045, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_s0ibv"]
-gradient = SubResource("Gradient_q41qf")
+gradient = SubResource("Gradient_u7ckc")
 height = 72
 fill = 2
 fill_from = Vector2(0.47549, 0)
