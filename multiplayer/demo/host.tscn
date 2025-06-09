@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpwp4xx6mv5p"]
+
+[ext_resource type="Script" uid="uid://bofadb3l5qeg8" path="res://multiplayer/demo/host.gd" id="1_8yxey"]
+
+[node name="ClientUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8yxey")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Connect" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Host" type="Button" parent="VBoxContainer/Connect"]
+layout_mode = 2
+text = "Host"
+
+[node name="RoomSecret" type="LineEdit" parent="VBoxContainer/Connect"]
+layout_mode = 2
+placeholder_text = "secret"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackToMainMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -29.0
+offset_top = 6.0
+offset_right = -8.0
+offset_bottom = 25.0
+grow_horizontal = 0
+text = "x"
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -19.0
+offset_right = 240.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Start
+"
+
+[connection signal="pressed" from="VBoxContainer/Connect/Host" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="BackToMainMenu" to="." method="_on_back_to_main_menu_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

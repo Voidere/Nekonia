@@ -24,8 +24,8 @@ Global="*res://scripts/global.gd"
 LevelManager="*res://scripts/level_manager.gd"
 Audiolvl2="*res://scripts/audiolvl_2.gd"
 Wintermus="*res://scripts/wintermus.gd"
-MQTTClient="*res://addons/mqtt/mqtt.gd"
 GameServerManager="*res://localmultiplayer/scripts/GameServerManager.gd"
+Client="*res://multiplayer/client/multiplayer_client.gd"
 
 [display]
 
@@ -45,6 +45,7 @@ folder_colors={
 "res://Levels/": "orange",
 "res://assets/": "green",
 "res://localmultiplayer/": "orange",
+"res://multiplayer/": "pink",
 "res://multiplayermqtt/": "purple",
 "res://multiplayerwebsocket/": "pink",
 "res://scenes/": "yellow",
@@ -113,4 +114,5 @@ attak={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
