@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1tybwlfwrvwm"
-path="res://.godot/imported/catlayericon.png-db33123ab8f9573ac6fde35843db39f8.ctex"
+uid="uid://c2tmvcgr0wd1q"
+path="res://.godot/imported/guifinish.png-d63ab08ec6f0970a0d0ed1651ae56d19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/catlayericon.png"
-dest_files=["res://.godot/imported/catlayericon.png-db33123ab8f9573ac6fde35843db39f8.ctex"]
+source_file="res://assets/KenoStuff/guifinish.png"
+dest_files=["res://.godot/imported/guifinish.png-d63ab08ec6f0970a0d0ed1651ae56d19.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://crlkl6dfq8g0l"]
+[gd_scene load_steps=55 format=4 uid="uid://crlkl6dfq8g0l"]
 
 [ext_resource type="Script" uid="uid://dil866ws511uy" path="res://scripts/jungels_level_2.gd" id="1_oe8kb"]
 [ext_resource type="Texture2D" uid="uid://cgtr66xjfjrxy" path="res://assets/jungles.png" id="1_u8h52"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bylqpbf4omdge" path="res://scenes/pickup.tscn" id="15_uwapd"]
 [ext_resource type="Script" uid="uid://buaoc0swp5vj7" path="res://scripts/pickups/pickup13.gd" id="16_kef3l"]
 [ext_resource type="Script" uid="uid://dyip4dmewfamj" path="res://scripts/game_manager2.gd" id="16_nscqb"]
+[ext_resource type="Texture2D" uid="uid://dksrt33v0soae" path="res://assets/porllichtnew.png" id="17_6rf86"]
 [ext_resource type="Texture2D" uid="uid://decke01v18rta" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Birch Tree 1.png" id="17_hldop"]
 [ext_resource type="Script" uid="uid://crbm855fecjrp" path="res://scripts/pickups/pickup15.gd" id="17_vb05f"]
 [ext_resource type="Script" uid="uid://iqi1k3jtcepb" path="res://scripts/pickups/pickup16.gd" id="18_qth4d"]
@@ -621,6 +622,9 @@ texture = ExtResource("7_bur3a")
 6:9/0 = 0
 7:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0u7e"]
+texture = ExtResource("17_6rf86")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epefj"]
 texture = ExtResource("11_0roy1")
 4:0/0 = 0
@@ -1043,6 +1047,7 @@ sources/14 = SubResource("TileSetAtlasSource_xpy2i")
 sources/15 = SubResource("TileSetAtlasSource_xxny7")
 sources/16 = SubResource("TileSetAtlasSource_7ntno")
 sources/1 = SubResource("TileSetAtlasSource_6rf86")
+sources/3 = SubResource("TileSetAtlasSource_x0u7e")
 
 [sub_resource type="Gradient" id="Gradient_s0ibv"]
 offsets = PackedFloat32Array(0.492857, 0.65, 1)

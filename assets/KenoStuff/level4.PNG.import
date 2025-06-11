@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbpd0fyqxdte7"
-path="res://.godot/imported/guibiggerbetter.png-776ee0a63ef0b51169bc8ea507967904.ctex"
+uid="uid://by7bjlivst8nn"
+path="res://.godot/imported/level4.PNG-4c316e4c40d802b407bc101231a34b19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/guibiggerbetter.png"
-dest_files=["res://.godot/imported/guibiggerbetter.png-776ee0a63ef0b51169bc8ea507967904.ctex"]
+source_file="res://assets/KenoStuff/level4.PNG"
+dest_files=["res://.godot/imported/level4.PNG-4c316e4c40d802b407bc101231a34b19.ctex"]
 
 [params]
 

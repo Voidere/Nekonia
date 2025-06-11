@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1fouxjyw5u5s"
-path="res://.godot/imported/glichedcurs.png-e02783b6083982a40c218de3fc5b5056.ctex"
+uid="uid://by04oxn4y3tjh"
+path="res://.godot/imported/guiplay.png-793b3a1046aa31c1120ab38f54490b94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/glichedcurs.png"
-dest_files=["res://.godot/imported/glichedcurs.png-e02783b6083982a40c218de3fc5b5056.ctex"]
+source_file="res://assets/KenoStuff/guiplay.png"
+dest_files=["res://.godot/imported/guiplay.png-793b3a1046aa31c1120ab38f54490b94.ctex"]
 
 [params]
 

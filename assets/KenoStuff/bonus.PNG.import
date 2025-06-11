@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2tmvcgr0wd1q"
-path="res://.godot/imported/guifinish.png-e5f5e65ea1a243f1f180846b282d9987.ctex"
+uid="uid://cya1iq3h5r13f"
+path="res://.godot/imported/bonus.PNG-e152dc15d2b5fe2abedde50bf57be68e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/guifinish.png"
-dest_files=["res://.godot/imported/guifinish.png-e5f5e65ea1a243f1f180846b282d9987.ctex"]
+source_file="res://assets/KenoStuff/bonus.PNG"
+dest_files=["res://.godot/imported/bonus.PNG-e152dc15d2b5fe2abedde50bf57be68e.ctex"]
 
 [params]
 
