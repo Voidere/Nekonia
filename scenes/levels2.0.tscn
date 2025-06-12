@@ -1,29 +1,34 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1bqjmgvhlh7p"]
+[gd_scene load_steps=9 format=3 uid="uid://d1bqjmgvhlh7p"]
 
 [ext_resource type="Script" uid="uid://ddboeb88t4pvk" path="res://scripts/levels_2.0.gd" id="1_qewaf"]
-[ext_resource type="Texture2D" uid="uid://rtlg7ymnirij" path="res://assets/Icons/placeholder2.PNG" id="1_vb7o2"]
+[ext_resource type="Texture2D" uid="uid://x44u7k42ry25" path="res://assets/KenoStuff/level1.PNG" id="2_c1c67"]
 [ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_cnmo0"]
-[ext_resource type="Texture2D" uid="uid://c0g484c4204m7" path="res://assets/Icons/placeholder3.PNG" id="2_crxt8"]
-[ext_resource type="Texture2D" uid="uid://l27rnq8ghuwg" path="res://assets/Icons/placeholder4.PNG" id="3_cnmo0"]
-[ext_resource type="Texture2D" uid="uid://d28bnwhy31pd3" path="res://assets/Icons/placeholder5.PNG" id="4_qewaf"]
+[ext_resource type="Texture2D" uid="uid://b8nas5b508q8c" path="res://assets/KenoStuff/level2.PNG" id="4_6xou3"]
+[ext_resource type="Texture2D" uid="uid://dw74f51a2lhuu" path="res://assets/KenoStuff/sprite4a.PNG" id="5_8bswv"]
 [ext_resource type="Texture2D" uid="uid://cwonkpce5xa7l" path="res://assets/cursornormal.png" id="5_crxt8"]
+[ext_resource type="Texture2D" uid="uid://by7bjlivst8nn" path="res://assets/KenoStuff/level4.PNG" id="6_id3ju"]
+[ext_resource type="Texture2D" uid="uid://cya1iq3h5r13f" path="res://assets/KenoStuff/bonus.PNG" id="7_ppdqf"]
 
 [node name="HScrollBar" type="HScrollBar"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+max_value = 0.0
 script = ExtResource("1_qewaf")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_vb7o2")
+texture = ExtResource("2_c1c67")
 
 [node name="Label" type="Label" parent="HBoxContainer/TextureRect"]
 layout_mode = 1
@@ -41,7 +46,7 @@ text = "Level 1"
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_crxt8")
+texture = ExtResource("4_6xou3")
 
 [node name="Label" type="Label" parent="HBoxContainer/TextureRect2"]
 layout_mode = 1
@@ -57,9 +62,45 @@ theme_override_fonts/font = ExtResource("2_cnmo0")
 theme_override_font_sizes/font_size = 64
 text = "Level 2"
 
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_8bswv")
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 48.0
+offset_right = 200.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_cnmo0")
+theme_override_font_sizes/font_size = 64
+text = "Level 3"
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_id3ju")
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect5"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 48.0
+offset_right = 200.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_cnmo0")
+theme_override_font_sizes/font_size = 64
+text = "Level 4"
+
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_cnmo0")
+texture = ExtResource("7_ppdqf")
 
 [node name="Label" type="Label" parent="HBoxContainer/TextureRect3"]
 layout_mode = 1
@@ -74,24 +115,6 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_cnmo0")
 theme_override_font_sizes/font_size = 64
 text = "Bonus"
-
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_qewaf")
-
-[node name="Label" type="Label" parent="HBoxContainer/TextureRect4"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -200.0
-offset_top = 48.0
-offset_right = 200.0
-offset_bottom = 112.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_cnmo0")
-theme_override_font_sizes/font_size = 64
-text = "Level 4"
 
 [node name="button_right" type="Button" parent="."]
 z_index = 3
@@ -122,5 +145,36 @@ rotation = -1.5708
 icon = ExtResource("5_crxt8")
 expand_icon = true
 
+[node name="Button_play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -36.0
+offset_right = 164.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.682353, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cnmo0")
+theme_override_font_sizes/font_size = 64
+text = "START"
+
 [connection signal="pressed" from="button_right" to="." method="_on_button_right_pressed"]
 [connection signal="pressed" from="button_left" to="." method="_on_button_left_pressed"]
+[connection signal="pressed" from="Button_play" to="." method="_on_button_play_pressed"]
