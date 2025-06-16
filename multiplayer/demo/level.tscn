@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://dgq14nic0u2eg"]
 
 [ext_resource type="Script" uid="uid://b2y8u2qi2d75j" path="res://multiplayer/demo/level.gd" id="1_64v6c"]
-[ext_resource type="PackedScene" uid="uid://cd4xuxqi1qlty" path="res://multiplayer/demo/player.tscn" id="2_ombfp"]
+[ext_resource type="PackedScene" uid="uid://drtub1gpihbcu" path="res://multiplayer/dummy/dummy_player.tscn" id="2_ombfp"]
 [ext_resource type="Texture2D" uid="uid://bbw3l7ns3qacb" path="res://assets/MountainDuskGodot/MountainsLayers/far-clouds.png" id="2_tr2dq"]
 [ext_resource type="Texture2D" uid="uid://bcnsdxg457gf4" path="res://assets/MountainDuskGodot/MountainsLayers/far-mountains.png" id="3_ombfp"]
 [ext_resource type="Texture2D" uid="uid://dwrfvfjdv5jpt" path="res://localmultiplayer/tileset.png" id="4_tsv1l"]
