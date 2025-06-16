@@ -78,4 +78,4 @@ func _on_back_to_main_menu_pressed():
 	get_tree().change_scene_to_file("res://UI/game_menu.tscn")
 
 func start_game():
-	get_tree().change_scene_to_file("res://multiplayer/demo/game2.tscn")
+	get_tree().change_scene_to_file("res://multiplayer/demo/level.tscn")

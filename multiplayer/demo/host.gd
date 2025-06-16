@@ -82,4 +82,4 @@ func _on_start_pressed():
 
 
 func start_game():
-	get_tree().change_scene_to_file("res://multiplayer/demo/game2.tscn")
+	get_tree().change_scene_to_file("res://multiplayer/demo/level.tscn")
