@@ -49,17 +49,42 @@ func _process(delta):
 
 
 func _parse_msg():
-	var parsed = JSON.parse_string(ws.get_packet().get_string_from_utf8())
-	if typeof(parsed) != TYPE_DICTIONARY or not parsed.has("type") or not parsed.has("id") or \
-		typeof(parsed.get("data")) != TYPE_STRING:
+	var packet = ws.get_packet()
+	var json_str = packet.get_string_from_utf8()
+	print("Received raw message: ", json_str)  # Debug log
+	
+	var parsed = JSON.parse_string(json_str)
+	if parsed == null:
+		print("Failed to parse JSON")
+		return false
+		
+	if typeof(parsed) != TYPE_DICTIONARY:
+		print("Message is not a dictionary, got type: ", typeof(parsed))
+		return false
+		
+	if not parsed.has("type"):
+		print("Message missing 'type' field")
+		return false
+		
+	if not parsed.has("id"):
+		print("Message missing 'id' field")
+		return false
+		
+	if typeof(parsed.get("data")) != TYPE_STRING:
+		print("'data' field is not a string, got type: ", typeof(parsed.get("data")))
 		return false
 
 	var msg := parsed as Dictionary
-	if not str(msg.type).is_valid_int() or not str(msg.id).is_valid_int():
+	if typeof(msg.type) != TYPE_INT and typeof(msg.type) != TYPE_FLOAT:
+		print("'type' is not a number: ", msg.type)
+		return false
+		
+	if typeof(msg.id) != TYPE_INT and typeof(msg.id) != TYPE_FLOAT:
+		print("'id' is not a number: ", msg.id)
 		return false
 
-	var type := str(msg.type).to_int()
-	var src_id := str(msg.id).to_int()
+	var type := int(msg.type)
+	var src_id := int(msg.id)
 
 	if type == Message.ID:
 		connected.emit(src_id, msg.data == "true")
