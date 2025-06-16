@@ -11,15 +11,19 @@ func _ready():
 	print("[Player] My ID: ", multiplayer.get_unique_id())
 	print("[Player] Is Authority: ", is_multiplayer_authority())
 	
-	# Set the player's input authority based on their ID
+	# Authority will be set by the level spawner
+	# If we're the local player and not the server (i.e., a client), request spawn from server
+	# Note: This spawn request might be redundant if the server already spawns clients on peer_connected.
+	# However, it can serve as a fallback or for specific scenarios.
+	# We need to ensure the parent node (expected to be the level) has 'request_player_spawn'.
+	if not multiplayer.is_server() and multiplayer.get_unique_id() == int(name) and get_parent().has_method("request_player_spawn"):
+		print("[Player] Client ", name, " requesting spawn.")
+		get_parent().request_player_spawn.rpc_id(1, multiplayer.get_unique_id())
+	
 	if str(name) == str(multiplayer.get_unique_id()):
-		print("[Player] Setting authority to: ", multiplayer.get_unique_id())
-		set_multiplayer_authority(multiplayer.get_unique_id())
-		# If we're the local player, request spawn from server
-		if not multiplayer.is_server():
-			get_parent().request_player_spawn.rpc_id(1, multiplayer.get_unique_id())
+		print("[Player] This player instance (", name, ") corresponds to my multiplayer ID.")
 	else:
-		print("[Player] Authority not set - Name doesn't match ID")
+		print("[Player] This player instance (", name, ") does NOT correspond to my multiplayer ID (", multiplayer.get_unique_id(), ").")
 
 func _physics_process(delta):
 	# Only process input for the local player
