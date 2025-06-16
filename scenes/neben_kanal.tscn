@@ -3682,12 +3682,12 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.916667, 0.0686275)
 
-[sub_resource type="Gradient" id="Gradient_vq0ec"]
+[sub_resource type="Gradient" id="Gradient_dfpfe"]
 offsets = PackedFloat32Array(0.492857, 0.65, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.575001, 0.575001, 0.575001, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_d8fnq"]
-gradient = SubResource("Gradient_vq0ec")
+gradient = SubResource("Gradient_dfpfe")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.916667, 0.0686275)
