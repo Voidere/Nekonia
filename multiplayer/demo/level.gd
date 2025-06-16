@@ -7,56 +7,63 @@ func _ready():
 	print("[Level] Is Server: ", multiplayer.is_server())
 	
 	# Wait a frame to ensure multiplayer is properly initialized
-	await get_tree().process_frame
+	await get_tree().process_frame # This await might need reconsideration depending on MultiplayerSpawner behavior
 	
-	# Spawn the host player for everyone
 	if multiplayer.is_server():
-		print("[Level] Server spawning host player")
-		spawn_player.rpc(1)
+		print("[Level] Server spawning its own player")
+		spawn_player(multiplayer.get_unique_id()) # Call local function for server's own player
 	
-	# When a new peer connects, spawn their player
 	multiplayer.peer_connected.connect(_on_peer_connected)
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
 
 func _on_peer_connected(id: int):
 	print("[Level] Peer connected: ", id)
-	# Only the server should spawn new players
 	if multiplayer.is_server():
 		print("[Level] Server spawning player for peer: ", id)
-		spawn_player.rpc(id)
+		spawn_player(id) # Call local function for new peer
 	else:
-		print("[Level] Client received peer connection: ", id)
+		print("[Level] Client received peer connection: ", id) # Client does nothing here regarding spawning
 
 func _on_peer_disconnected(id: int):
 	print("[Level] Peer disconnected: ", id)
-	# Remove the disconnected player
-	if has_node(str(id)):
-		get_node(str(id)).queue_free()
+	# Player removal is often handled by MultiplayerSpawner or by RPC from server
+	# For now, keep existing logic, but this might need adjustment if MultiplayerSpawner handles it.
+	if multiplayer.is_server(): # Only server should decide to remove nodes
+		var player_node = get_node_or_null(str(id))
+		if player_node:
+			player_node.queue_free()
+			print("[Level] Server removed player: ", id)
 
-@rpc("any_peer")
-func request_player_spawn(id: int):
-	print("[Level] Received spawn request for player: ", id)
-	if multiplayer.is_server():
-		spawn_player.rpc(id)
-
-@rpc("any_peer", "call_local")
+# This is now a local function, only called by the server.
 func spawn_player(id: int):
 	print("[Level] Attempting to spawn player: ", id)
-	print("[Level] Current children: ", get_children().map(func(n): return n.name))
-	
-	# Don't spawn if player already exists
+	# It's possible the MultiplayerSpawner might have already created this node on the server
+	# if the client somehow initiated a spawn request that the spawner is configured to respect.
+	# However, with our current logic, server is authoritative for spawning.
 	if has_node(str(id)):
 		print("[Level] Player already exists: ", id)
+		# If it already exists, ensure its authority is correctly set.
+		# This could happen if the spawner created it based on a client request before this code runs.
+		# However, for now, we assume this function is the sole spawner on the server.
+		var existing_player = get_node(str(id))
+		if existing_player.get_multiplayer_authority() != id:
+			print("[Level] Correcting authority for existing player ", id)
+			existing_player.set_multiplayer_authority(id)
 		return
 		
 	var player = player_scene.instantiate()
-	player.name = str(id)
-	add_child(player, true)
+	player.name = str(id) # Crucial for MultiplayerSpawner and general node reference
+	
+	# Set multiplayer authority BEFORE adding to scene if MultiplayerSpawner might react instantly
+	player.set_multiplayer_authority(id)
+	
+	add_child(player, true) # Add to scene, MultiplayerSpawner should pick it up
 	
 	# Set the player's position based on their ID
-	player.position = Vector2(100 + (id * 50), 100)
+	# This initial position can also be synchronized via properties if needed
+	player.position = Vector2(100 + (id % 10 * 50), 100 + (id / 10 * 50)) # Avoid simple linear placement
 	
-	# Set multiplayer authority
-	player.set_multiplayer_authority(id)
-	print("[Level] Successfully spawned player: ", id)
+	print("[Level] Successfully spawned player: ", id, " with authority: ", player.get_multiplayer_authority())
 	print("[Level] New children: ", get_children().map(func(n): return n.name))
+
+# Removed the request_player_spawn RPC function entirely.
