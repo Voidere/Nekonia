@@ -23,11 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bylqpbf4omdge" path="res://scenes/pickup.tscn" id="15_uwapd"]
 [ext_resource type="Script" uid="uid://buaoc0swp5vj7" path="res://scripts/pickups/pickup13.gd" id="16_kef3l"]
 [ext_resource type="Script" uid="uid://dyip4dmewfamj" path="res://scripts/game_manager2.gd" id="16_nscqb"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://dqtbn8fiywei7" path="res://assets/Fruits_Berries.png" id="17_6rf86"]
-=======
 [ext_resource type="Texture2D" uid="uid://dksrt33v0soae" path="res://assets/porllichtnew.png" id="17_6rf86"]
->>>>>>> ce7ecb55bde98c3e2b40f3cba4daab4ddff2aed3
 [ext_resource type="Texture2D" uid="uid://decke01v18rta" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Birch Tree 1.png" id="17_hldop"]
 [ext_resource type="Script" uid="uid://crbm855fecjrp" path="res://scripts/pickups/pickup15.gd" id="17_vb05f"]
 [ext_resource type="Script" uid="uid://iqi1k3jtcepb" path="res://scripts/pickups/pickup16.gd" id="18_qth4d"]
@@ -628,7 +624,6 @@ texture = ExtResource("7_bur3a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0u7e"]
 texture = ExtResource("17_6rf86")
-<<<<<<< HEAD
 margins = Vector2i(2, 0)
 0:0/0 = 0
 1:0/0 = 0
@@ -642,8 +637,6 @@ margins = Vector2i(2, 0)
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
-=======
->>>>>>> ce7ecb55bde98c3e2b40f3cba4daab4ddff2aed3
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epefj"]
 texture = ExtResource("11_0roy1")
