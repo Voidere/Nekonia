@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5njc53xmtnso"
-path="res://.godot/imported/Idle.png-c16e281e545a049f8cc5b4597e24a34d.ctex"
+uid="uid://ddwpq6otftdkq"
+path="res://.godot/imported/Run.png-eb4b27f42b3e763b029d2f93787f9691.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Mushroom/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-c16e281e545a049f8cc5b4597e24a34d.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Goblin/Run.png"
+dest_files=["res://.godot/imported/Run.png-eb4b27f42b3e763b029d2f93787f9691.ctex"]
 
 [params]
 

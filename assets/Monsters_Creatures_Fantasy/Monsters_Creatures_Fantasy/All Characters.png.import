@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4j3pfho3gfni"
-path="res://.godot/imported/Take Hit.png-9b24f75f4301f2b59563bbf74c79b958.ctex"
+uid="uid://bsvv00xh3qd2u"
+path="res://.godot/imported/All Characters.png-54c52e7b4314dd7c91821323927fa86c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Skeleton/Take Hit.png"
-dest_files=["res://.godot/imported/Take Hit.png-9b24f75f4301f2b59563bbf74c79b958.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/All Characters.png"
+dest_files=["res://.godot/imported/All Characters.png-54c52e7b4314dd7c91821323927fa86c.ctex"]
 
 [params]
 

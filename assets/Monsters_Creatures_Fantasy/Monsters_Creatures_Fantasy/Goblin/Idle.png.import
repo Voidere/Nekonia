@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brxxgkjah0cg"
-path="res://.godot/imported/Flight.png-1792f89a5ad0af51321bc4e27d7114bf.ctex"
+uid="uid://dqnbgmjq4cdon"
+path="res://.godot/imported/Idle.png-11f1f9a02db4ef631631bf06e33e3ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Flying eye/Flight.png"
-dest_files=["res://.godot/imported/Flight.png-1792f89a5ad0af51321bc4e27d7114bf.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Goblin/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-11f1f9a02db4ef631631bf06e33e3ff5.ctex"]
 
 [params]
 

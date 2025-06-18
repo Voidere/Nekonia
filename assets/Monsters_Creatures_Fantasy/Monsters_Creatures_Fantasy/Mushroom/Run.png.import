@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8txbsshvxvp4"
-path="res://.godot/imported/Shield.png-f175e3965123304252568f584918c994.ctex"
+uid="uid://b0obegg718mnn"
+path="res://.godot/imported/Run.png-58c81068d51cf7e8f4cf31dd7ea25f55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Skeleton/Shield.png"
-dest_files=["res://.godot/imported/Shield.png-f175e3965123304252568f584918c994.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Mushroom/Run.png"
+dest_files=["res://.godot/imported/Run.png-58c81068d51cf7e8f4cf31dd7ea25f55.ctex"]
 
 [params]
 

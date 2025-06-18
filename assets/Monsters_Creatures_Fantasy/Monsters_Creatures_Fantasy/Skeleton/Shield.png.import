@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cou2q0i743aol"
-path="res://.godot/imported/Attack.png-f6447ecdd4f2fe4b6a1883c9b96b371c.ctex"
+uid="uid://d2niqg3f8bn2g"
+path="res://.godot/imported/Shield.png-2b21b5bbd42a86ab03a33c7b535bef03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Flying eye/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-f6447ecdd4f2fe4b6a1883c9b96b371c.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Skeleton/Shield.png"
+dest_files=["res://.godot/imported/Shield.png-2b21b5bbd42a86ab03a33c7b535bef03.ctex"]
 
 [params]
 

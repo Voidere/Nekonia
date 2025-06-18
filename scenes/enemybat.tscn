@@ -7,23 +7,23 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_utw1l"]
 radius = 5.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ymg6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mogda"]
 atlas = ExtResource("2_hmntm")
 region = Rect2(0, 0, 16, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bgja1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c32b4"]
 atlas = ExtResource("2_hmntm")
 region = Rect2(16, 0, 16, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ph31p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_buidq"]
 atlas = ExtResource("2_hmntm")
 region = Rect2(32, 0, 16, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ca46"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3xk0"]
 atlas = ExtResource("2_hmntm")
 region = Rect2(48, 0, 16, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0yuyh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotl6"]
 atlas = ExtResource("2_hmntm")
 region = Rect2(64, 0, 16, 18)
 
@@ -31,19 +31,19 @@ region = Rect2(64, 0, 16, 18)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ymg6")
+"texture": SubResource("AtlasTexture_mogda")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bgja1")
+"texture": SubResource("AtlasTexture_c32b4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ph31p")
+"texture": SubResource("AtlasTexture_buidq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ca46")
+"texture": SubResource("AtlasTexture_w3xk0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0yuyh")
+"texture": SubResource("AtlasTexture_iotl6")
 }],
 "loop": true,
 "name": &"run",
@@ -60,6 +60,7 @@ script = ExtResource("1_h1nov")
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.2, 1.16)
 shape = SubResource("CircleShape2D_utw1l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -67,12 +68,12 @@ scale = Vector2(0.98, 1)
 sprite_frames = SubResource("SpriteFrames_8v4r1")
 animation = &"run"
 autoplay = "run"
-frame = 3
-frame_progress = 0.609311
+frame_progress = 0.108187
 
 [node name="Killzone2_0" parent="." instance=ExtResource("4_o3dmg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2_0"]
+scale = Vector2(1.24, 1.16)
 shape = SubResource("CircleShape2D_k24qw")
 
 [node name="Raycastright" type="RayCast2D" parent="."]

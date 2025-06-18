@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7psl6o1he1te"
-path="res://.godot/imported/Take Hit.png-acf76b2c267e3ea06fefc75c7b063edf.ctex"
+uid="uid://drnvivskf2wvn"
+path="res://.godot/imported/Attack.png-4a9452dcbff416d9babc66806a21b7a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png"
-dest_files=["res://.godot/imported/Take Hit.png-acf76b2c267e3ea06fefc75c7b063edf.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Mushroom/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-4a9452dcbff416d9babc66806a21b7a7.ctex"]
 
 [params]
 

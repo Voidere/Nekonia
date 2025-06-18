@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8e5e8mnex0go"
-path="res://.godot/imported/All Characters.png-c0ee566d32490560ad4f7af9bc74e1a0.ctex"
+uid="uid://dcolffjydi026"
+path="res://.godot/imported/Attack.png-a8a69c642b0cb74cee2eca1c1adc96d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/All Characters.png"
-dest_files=["res://.godot/imported/All Characters.png-c0ee566d32490560ad4f7af9bc74e1a0.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Skeleton/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-a8a69c642b0cb74cee2eca1c1adc96d0.ctex"]
 
 [params]
 

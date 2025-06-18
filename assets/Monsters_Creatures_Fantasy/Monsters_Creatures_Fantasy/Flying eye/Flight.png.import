@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddwa3g24qjfh2"
-path="res://.godot/imported/Run.png-eb57e5151a3924c337c404be9da55fe6.ctex"
+uid="uid://di5yatow5bm2b"
+path="res://.godot/imported/Flight.png-edf6d107c186a4768453c4685025c2ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsters_Creatures_Fantasy/Mushroom/Run.png"
-dest_files=["res://.godot/imported/Run.png-eb57e5151a3924c337c404be9da55fe6.ctex"]
+source_file="res://assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png"
+dest_files=["res://.godot/imported/Flight.png-edf6d107c186a4768453c4685025c2ae.ctex"]
 
 [params]
 
