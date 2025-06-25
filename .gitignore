@@ -16,3 +16,6 @@ desktop.ini
 
 #webrtc binary
 addons/webrtc/lib/~libwebrtc_native.windows.template_debug.x86_64.dll
+
+#Websocket signalling
+multiplayer/Websocket_signalling/node_modules

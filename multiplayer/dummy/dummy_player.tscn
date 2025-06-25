@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drtub1gpihbcu"]
-
-[ext_resource type="Script" uid="uid://1p7yqw0o7j67" path="res://multiplayer/dummy/dummy_player.gd" id="1_2yns0"]
-
-[node name="DummyPlayer" type="Node2D"]
-script = ExtResource("1_2yns0")
