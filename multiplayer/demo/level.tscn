@@ -1,10 +1,43 @@
 [gd_scene load_steps=8 format=4 uid="uid://dgq14nic0u2eg"]
 
-[ext_resource type="Script" uid="uid://b2y8u2qi2d75j" path="res://multiplayer/demo/level.gd" id="1_64v6c"]
-[ext_resource type="PackedScene" uid="uid://drtub1gpihbcu" path="res://multiplayer/dummy/dummy_player.tscn" id="2_ombfp"]
+[ext_resource type="PackedScene" uid="uid://cd4xuxqi1qlty" path="res://multiplayer/demo/player.tscn" id="1_64v6c"]
 [ext_resource type="Texture2D" uid="uid://bbw3l7ns3qacb" path="res://assets/MountainDuskGodot/MountainsLayers/far-clouds.png" id="2_tr2dq"]
 [ext_resource type="Texture2D" uid="uid://bcnsdxg457gf4" path="res://assets/MountainDuskGodot/MountainsLayers/far-mountains.png" id="3_ombfp"]
 [ext_resource type="Texture2D" uid="uid://dwrfvfjdv5jpt" path="res://localmultiplayer/tileset.png" id="4_tsv1l"]
+
+[sub_resource type="GDScript" id="GDScript_y5sv8"]
+script/source = "extends Node
+
+@export var player_scene: PackedScene
+
+func _ready():
+	# Only spawn players if we're in multiplayer
+	if multiplayer.is_server():
+		# Spawn the host player
+		spawn_player(1)
+	
+	# When a new peer connects, spawn their player
+	multiplayer.peer_connected.connect(_on_peer_connected)
+	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
+
+func _on_peer_connected(id: int):
+	# Spawn the new player for all clients
+	spawn_player.rpc(id)
+
+func _on_peer_disconnected(id: int):
+	# Remove the disconnected player
+	if has_node(str(id)):
+		get_node(str(id)).queue_free()
+
+@rpc(\"any_peer\", \"call_local\")
+func spawn_player(id: int):
+	var player = player_scene.instantiate()
+	player.name = str(id)
+	add_child(player, true)
+	
+	# Set the player's position based on their ID
+	player.position = Vector2(100 + (id * 50), 100)
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwohc"]
 texture = ExtResource("4_tsv1l")
@@ -19,8 +52,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wwohc")
 
 [node name="level" type="Node"]
-script = ExtResource("1_64v6c")
-player_scene = ExtResource("2_ombfp")
+script = SubResource("GDScript_y5sv8")
+player_scene = ExtResource("1_64v6c")
 
 [node name="Far-clouds" type="Sprite2D" parent="."]
 position = Vector2(142, 24)
