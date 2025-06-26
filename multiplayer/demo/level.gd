@@ -3,96 +3,114 @@ extends Node
 @export var player_scene: PackedScene
 
 func _ready():
-	# Only connect peer_disconnected for now. peer_connected logic is being replaced.
-	var peer_disconnected_error = multiplayer.peer_disconnected.connect(_on_peer_disconnected)
-	if peer_disconnected_error != OK:
-		print("[Level] CRITICAL ERROR: Failed to connect peer_disconnected signal. Error code: ", peer_disconnected_error)
-	else:
-		print("[Level] Successfully connected peer_disconnected signal.")
-
-	print("[Level] Ready - My ID: ", multiplayer.get_unique_id())
-	print("[Level] Is Server: ", multiplayer.is_server())
-		
+	print("[Level:%s] Level ready. Is Server: %s" % [multiplayer.get_unique_id(), multiplayer.is_server()])
+	
+	# Wait a frame to ensure multiplayer is properly initialized, especially for clients.
+	await get_tree().process_frame
+	
 	if multiplayer.is_server():
-		print("[Level] _ready: Server path entered.")
-		# Server's own player is no longer spawned directly here.
-		# server_spawn_all_players will handle it.
-
-		print("[Level] _ready: Server will call server_spawn_all_players after a short delay.")
-		await get_tree().create_timer(0.2).timeout 
-
-		if not is_instance_valid(self):
-			print("[Level] _ready: Instance became invalid before calling server_spawn_all_players. Aborting.")
-			return
-
-		if multiplayer.is_server(): 
-			print("[Level] _ready: Delay complete, server now calling server_spawn_all_players.")
-			server_spawn_all_players()
-		else:
-			print("[Level] _ready: No longer server after delay. Not calling server_spawn_all_players.")
-
-func _on_peer_disconnected(id: int):
-	print("[Level] Peer disconnected: ", id)
-	if multiplayer.is_server(): 
-		var player_node = get_node_or_null(str(id))
-		if player_node:
-			# Important: Ensure this is not fighting with MultiplayerSpawner's auto-cleanup if any.
-			# For now, explicit removal by server is fine.
-			player_node.queue_free()
-			print("[Level] Server removed player node: ", id)
-
-func spawn_player(id: int):
-	print("[Level] spawn_player: Attempting to spawn player for ID: ", id)
+		# Server spawns itself for everyone. ID 1 is typically the server/host.
+		print("[Level:1] Server is spawning itself.")
+		spawn_player_for_everyone.rpc(create_player_info(1))
 	
-	if has_node(str(id)):
-		print("[Level] spawn_player: Player node ", str(id), " already exists. Ensuring authority.")
-		var existing_player = get_node(str(id))
-		if existing_player.get_multiplayer_authority() != id:
-			print("[Level] spawn_player: Correcting authority for existing player ", id, " to ", id)
-			existing_player.set_multiplayer_authority(id)
+	multiplayer.peer_connected.connect(_on_player_joined_network)
+	multiplayer.peer_disconnected.connect(_on_player_left_network)
+
+
+func create_player_info(peer_id: int) -> Dictionary:
+	# For now, player_info is just the ID. Can be expanded later (e.g., name, color).
+	return {"id": peer_id}
+
+
+# Called when the multiplayer API signals a new peer has connected.
+func _on_player_joined_network(new_peer_id: int):
+	print("[Level:%s] Network: Peer %s connected." % [multiplayer.get_unique_id(), new_peer_id])
+	
+	# Existing players (including server) tell the new player about themselves.
+	# The new player should not send info about itself to itself via this RPC.
+	if multiplayer.get_unique_id() != new_peer_id:
+		var my_info = create_player_info(multiplayer.get_unique_id())
+		print("[Level:%s] Telling new peer %s about me." % [multiplayer.get_unique_id(), new_peer_id])
+		send_my_info_to_new_peer.rpc_id(new_peer_id, my_info)
+
+	# Server is responsible for telling everyone to spawn the NEWLY connected player.
+	if multiplayer.is_server():
+		print("[Level:1] Server is telling everyone to spawn new peer %s." % new_peer_id)
+		var new_player_info = create_player_info(new_peer_id)
+		spawn_player_for_everyone.rpc(new_player_info)
+
+
+# RPC called by existing players, executed on the NEW player's machine.
+@rpc("authority", "call_local", "reliable")
+func send_my_info_to_new_peer(info_of_existing_player: Dictionary):
+	var my_id = multiplayer.get_unique_id()
+	var existing_player_id = info_of_existing_player.id
+	print("[Level:%s] Received info about existing player %s. Spawning locally." % [my_id, existing_player_id])
+	# The new player now spawns the character for the existing player.
+	_spawn_player_visuals(info_of_existing_player)
+
+
+# RPC called by the server to make all clients (including itself) spawn a player.
+@rpc("any_peer", "call_local", "reliable")
+func spawn_player_for_everyone(player_info_to_spawn: Dictionary):
+	var my_id = multiplayer.get_unique_id()
+	var spawn_id = player_info_to_spawn.id
+	print("[Level:%s] Received request to spawn player %s for everyone. Spawning locally." % [my_id, spawn_id])
+	# All peers (clients and server) will execute this to spawn the player.
+	_spawn_player_visuals(player_info_to_spawn)
+
+
+# Local helper function to instantiate and set up the player character.
+func _spawn_player_visuals(p_info: Dictionary):
+	var player_id_to_spawn = p_info.id
+	var local_peer_id = multiplayer.get_unique_id()
+	
+	print("[Level:%s] _spawn_player_visuals for ID %s." % [local_peer_id, player_id_to_spawn])
+	
+	if has_node(str(player_id_to_spawn)):
+		print("[Level:%s] Player %s already exists. Skipping spawn." % [local_peer_id, player_id_to_spawn])
 		return
 		
-	var player = player_scene.instantiate()
-	player.name = str(id) 
-	player.set_multiplayer_authority(id) 
-	add_child(player, true) 
-	player.position = Vector2(100 + (id % 10 * 50), 100 + (id / 10 * 50))
-	print("[Level] spawn_player: Successfully spawned player: ", id, " with authority: ", player.get_multiplayer_authority())
-
-func server_spawn_all_players():
-	if not multiplayer.is_server():
-		print("[Level] server_spawn_all_players: Called on a client instance. Doing nothing. My ID: ", multiplayer.get_unique_id())
+	if player_scene == null:
+		printerr("[Level:%s] Player scene is not set!" % local_peer_id)
 		return
 
-	var own_id = multiplayer.get_unique_id()
-	print("[Level] server_spawn_all_players: Executing as server. My ID: ", own_id)
-
-	# Spawn server's own player first
-	print("[Level] server_spawn_all_players: Server attempting to spawn its own player (ID: ", own_id, ").")
-	if not has_node(str(own_id)):
-		spawn_player(own_id)
-	else:
-		print("[Level] server_spawn_all_players: Server's own player node (ID: ", own_id, ") already exists. Ensuring authority.")
-		# This is a good place to ensure authority is correct even if it somehow pre-existed
-		var existing_server_player = get_node(str(own_id))
-		if existing_server_player.get_multiplayer_authority() != own_id:
-			existing_server_player.set_multiplayer_authority(own_id)
+	print("[Level:%s] Instantiating player scene for ID %s." % [local_peer_id, player_id_to_spawn])
+	var player = player_scene.instantiate()
+	player.name = str(player_id_to_spawn) # Name node by ID for easy lookup & authority checks
 	
-	# Spawn players for remote peers
-	var remote_peers = multiplayer.get_peers() 
-	print("[Level] server_spawn_all_players: Current remote peers: ", remote_peers)
-
-	if remote_peers.is_empty():
-		print("[Level] server_spawn_all_players: No remote peers connected to spawn players for.")
-	else:
-		for peer_id in remote_peers:
-			print("[Level] server_spawn_all_players: Server attempting to spawn player for remote peer_id: ", peer_id)
-			if not has_node(str(peer_id)):
-				spawn_player(peer_id)
-			else:
-				print("[Level] server_spawn_all_players: Player node for remote peer_id ", peer_id, " already exists. Skipping spawn, ensuring authority.")
-				var existing_remote_player = get_node(str(peer_id))
-				if existing_remote_player.get_multiplayer_authority() != peer_id:
-					existing_remote_player.set_multiplayer_authority(peer_id)
+	# Set position before adding to scene to avoid physics issues.
+	player.position = Vector2(100 + (player_id_to_spawn * 60), 250) 
 	
-	print("[Level] server_spawn_all_players: Finished processing all players.")
+	print("[Level:%s] Adding player %s to scene." % [local_peer_id, player_id_to_spawn])
+	add_child(player, true)
+	
+	# CRUCIAL: Set the multiplayer authority for the spawned player.
+	# This tells the multiplayer system which peer controls this node.
+	print("[Level:%s] Setting multiplayer authority of player %s to %s." % [local_peer_id, player_id_to_spawn, player_id_to_spawn])
+	player.set_multiplayer_authority(player_id_to_spawn)
+	
+	print("[Level:%s] Successfully spawned player %s." % [local_peer_id, player_id_to_spawn])
+
+
+func _on_player_left_network(peer_id: int):
+	print("[Level:%s] Network: Peer %s disconnected." % [multiplayer.get_unique_id(), peer_id])
+	var player_node = get_node_or_null(str(peer_id))
+	if player_node:
+		print("[Level:%s] Removing player node for disconnected peer %s." % [multiplayer.get_unique_id(), peer_id])
+		player_node.queue_free()
+	else:
+		print("[Level:%s] Player node for peer %s not found for removal." % [multiplayer.get_unique_id(), peer_id])
+
+# The old request_player_spawn and spawn_player are no longer needed with this pattern.
+# Leaving them commented out for now, can be removed later.
+#@rpc("any_peer")
+#func request_player_spawn(id: int):
+#	print("[Level] Received spawn request for player: ", id)
+#	if multiplayer.is_server():
+#		spawn_player.rpc(id)
+
+#@rpc("any_peer", "call_local")
+#func spawn_player(id: int):
+#	print("[Level] Attempting to spawn player: ", id)
+#	# ... old implementation ...
