@@ -12,17 +12,27 @@ func _ready():
 	print("[Player] Is Authority: ", is_multiplayer_authority())
 	
 	# Set the player's input authority based on their ID
+	# This script instance represents the player character in the scene tree.
+	# Its 'name' property is set to the peer ID by level.gd when spawned.
 	if str(name) == str(multiplayer.get_unique_id()):
-		print("[Player] Setting authority to: ", multiplayer.get_unique_id())
+		# This instance of the player scene corresponds to the local player on this machine.
+		print("[Player:%s] This node is me. Setting multiplayer authority to %s." % [name, multiplayer.get_unique_id()])
 		set_multiplayer_authority(multiplayer.get_unique_id())
-		# If we're the local player, request spawn from server
-		if not multiplayer.is_server():
-			get_parent().request_player_spawn.rpc_id(1, multiplayer.get_unique_id())
+		# The explicit request_player_spawn from client to server is no longer needed here.
+		# Spawning is now handled by level.gd:
+		# 1. Server calls spawn_player.rpc(new_client_id) for new clients.
+		# 2. Existing clients call tell_new_peer_about_me.rpc_id(new_client_id, my_id),
+		#    and the new client then calls spawn_player(my_id) locally.
+		# if not multiplayer.is_server():
+			# get_parent().request_player_spawn.rpc_id(1, multiplayer.get_unique_id()) # REMOVED
 	else:
-		print("[Player] Authority not set - Name doesn't match ID")
+		# This instance of the player scene corresponds to a remote player.
+		# Authority should have been set by the machine that owns this player.
+		# Here, we just ensure it's clear this is not the local player's node.
+		print("[Player:%s] This node represents a remote peer. Authority is %s. My local ID is %s." % [name, get_multiplayer_authority(), multiplayer.get_unique_id()])
 
 func _physics_process(delta):
-	# Only process input for the local player
+	# Only process input for the local player, i.e., the player node whose authority is this machine.
 	if not is_multiplayer_authority():
 		return
 		
