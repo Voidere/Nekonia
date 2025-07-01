@@ -67,6 +67,7 @@ func _connected(id, use_mesh):
 	else:
 		rtc_mp.create_client(id)
 	multiplayer.multiplayer_peer = rtc_mp
+	Lobby.register_self(id)
 
 
 func _lobby_joined(_lobby):

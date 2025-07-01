@@ -26,6 +26,7 @@ Audiolvl2="*res://scripts/audiolvl_2.gd"
 Wintermus="*res://scripts/wintermus.gd"
 GameServerManager="*res://localmultiplayer/scripts/GameServerManager.gd"
 Client="*res://multiplayer/client/multiplayer_client.gd"
+Lobby="*res://multiplayer/demo/lobby.gd"
 
 [display]
 
