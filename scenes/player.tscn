@@ -13,7 +13,6 @@ script = ExtResource("1_unu5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.55271e-15, -5.96046e-08)
-scale = Vector2(1.08106, 1.05652)
 sprite_frames = ExtResource("2_61vw2")
 animation = &"take_damage"
 frame = 3

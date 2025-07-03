@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpwp4xx6mv5p"]
 
-[ext_resource type="Script" uid="uid://bofadb3l5qeg8" path="res://multiplayer/demo/host.gd" id="1_8yxey"]
+[ext_resource type="Script" uid="uid://bofadb3l5qeg8" path="res://multiplayer/game/host.gd" id="1_8yxey"]
 
 [node name="ClientUI" type="Control"]
 layout_mode = 3

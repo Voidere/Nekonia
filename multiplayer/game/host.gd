@@ -48,7 +48,7 @@ func _lobby_joined(lobby):
 func _lobby_sealed():
 	_log("[Signaling] Lobby has been sealed")
 	# Host instructs everybody to switch scenes
-	Lobby.load_game.rpc("res://multiplayer/demo/level.tscn")
+	Lobby.load_game.rpc("res://multiplayer/game/level.tscn")
 
 
 func _log(msg):

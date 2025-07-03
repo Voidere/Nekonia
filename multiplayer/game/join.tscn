@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b0rwkhogu30y4"]
 
-[ext_resource type="Script" uid="uid://c1uysy2yvj6q3" path="res://multiplayer/demo/join.gd" id="1_kbwa1"]
+[ext_resource type="Script" uid="uid://c1uysy2yvj6q3" path="res://multiplayer/game/join.gd" id="1_kbwa1"]
 
 [node name="ClientUI" type="Control"]
 layout_mode = 3
