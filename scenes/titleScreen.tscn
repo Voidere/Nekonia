@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=4 uid="uid://b6ptgqyv3rqou"]
+[gd_scene load_steps=144 format=4 uid="uid://b6ptgqyv3rqou"]
 
 [ext_resource type="Script" uid="uid://dm2rxj37u1kao" path="res://scripts/titleScreen.gd" id="1_a6h3n"]
 [ext_resource type="Theme" uid="uid://dafigwk7pakgp" path="res://assets/own/buttonsbetter.tres" id="2_wk16c"]
@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://brble0stpyg53" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/wineter.png" id="43_fjfhk"]
 [ext_resource type="Texture2D" uid="uid://cmp5midf7hk6j" path="res://assets/pixil-frame-0 (6).png" id="43_lakm8"]
 [ext_resource type="Texture2D" uid="uid://c20akf6t6e7pq" path="res://assets/xmasskinrun.png" id="44_uekv7"]
+[ext_resource type="PackedScene" uid="uid://bdy6reh0grm7q" path="res://scenes/install_sounds.tscn" id="46_i13q3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0yof"]
 
@@ -9143,6 +9144,9 @@ sprite_frames = SubResource("SpriteFrames_2k80b")
 animation = &"run"
 autoplay = "run"
 frame_progress = 0.575113
+
+[node name="install_sounds" parent="." instance=ExtResource("46_i13q3")]
+root_path = NodePath("..")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

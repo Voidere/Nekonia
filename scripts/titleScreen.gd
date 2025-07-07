@@ -1,4 +1,6 @@
 extends Control
+@onready var start: AudioStreamPlayer = $StartButton/AudioStreamPlayer
+
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels.tscn")
 func _on_quir_pressed() -> void:
