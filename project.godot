@@ -25,8 +25,9 @@ LevelManager="*res://scripts/level_manager.gd"
 Audiolvl2="*res://scripts/audiolvl_2.gd"
 Wintermus="*res://scripts/wintermus.gd"
 GameServerManager="*res://localmultiplayer/scripts/GameServerManager.gd"
-Client="*res://multiplayer/client/multiplayer_client.gd"
 Lobby="*res://multiplayer/client/lobby.gd"
+AudioManager="*res://scripts/AudioManager.gd"
+Client="*res://multiplayer/client/multiplayer_client.gd"
 
 [display]
 
@@ -115,5 +116,6 @@ attak={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.269707, 0.242949, 0.263704, 1)
+2d/snap/snap_2d_transforms_to_pixel=true

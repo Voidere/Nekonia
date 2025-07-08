@@ -45,6 +45,7 @@ func pauseMenu():
 		audio_stream_player.stream_paused = true
 		Engine.time_scale = 0
 	paused = !paused
+	
 
 @export var level_number: int
 

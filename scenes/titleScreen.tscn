@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=4 uid="uid://b6ptgqyv3rqou"]
+[gd_scene load_steps=146 format=4 uid="uid://b6ptgqyv3rqou"]
 
 [ext_resource type="Script" uid="uid://dm2rxj37u1kao" path="res://scripts/titleScreen.gd" id="1_a6h3n"]
 [ext_resource type="Theme" uid="uid://dafigwk7pakgp" path="res://assets/own/buttonsbetter.tres" id="2_wk16c"]
@@ -45,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://brble0stpyg53" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/wineter.png" id="43_fjfhk"]
 [ext_resource type="Texture2D" uid="uid://cmp5midf7hk6j" path="res://assets/pixil-frame-0 (6).png" id="43_lakm8"]
 [ext_resource type="Texture2D" uid="uid://c20akf6t6e7pq" path="res://assets/xmasskinrun.png" id="44_uekv7"]
-[ext_resource type="PackedScene" uid="uid://bdy6reh0grm7q" path="res://scenes/install_sounds.tscn" id="46_i13q3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0yof"]
 
@@ -76,6 +75,8 @@ texture = ExtResource("4_lgrt2")
 texture_margin_top = 0.369184
 region_rect = Rect2(0, 59, 16, 16)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jlyid"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7s01"]
 texture = ExtResource("23_268xq")
 
@@ -85,6 +86,8 @@ texture = ExtResource("23_268xq")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n4l3p"]
 texture = ExtResource("24_lycs1")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i13q3"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lk6xl"]
 texture = ExtResource("25_t46hr")
 
@@ -93,6 +96,8 @@ texture = ExtResource("25_t46hr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkib1"]
 texture = ExtResource("25_t46hr")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_unsdh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yacap"]
 texture = ExtResource("26_nm0ap")
@@ -8975,7 +8980,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a6h3n")
 
-[node name="Button" type="Button" parent="."]
+[node name="settings" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
 offset_left = 894.0
@@ -9029,7 +9034,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_nun4u")
 icon_alignment = 1
 expand_icon = true
 
-[node name="crdtsbuton" type="Button" parent="."]
+[node name="credits" type="Button" parent="."]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -9048,7 +9053,7 @@ theme_override_fonts/font = ExtResource("12_fmod0")
 text = "Credits
 "
 
-[node name="quir" type="Button" parent="."]
+[node name="quit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -9080,6 +9085,7 @@ offset_left = 37.0
 offset_top = 660.0
 offset_right = 75.0
 offset_bottom = 696.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jlyid")
 theme_override_styles/hover = SubResource("StyleBoxTexture_t7s01")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_p1kyg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_n4l3p")
@@ -9091,6 +9097,7 @@ offset_left = 81.0
 offset_top = 660.0
 offset_right = 119.0
 offset_bottom = 696.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i13q3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lk6xl")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_y1lfu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jkib1")
@@ -9102,6 +9109,7 @@ offset_left = 127.0
 offset_top = 660.0
 offset_right = 165.0
 offset_bottom = 696.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_unsdh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yacap")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cucip")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tunmf")
@@ -9145,14 +9153,11 @@ animation = &"run"
 autoplay = "run"
 frame_progress = 0.575113
 
-[node name="install_sounds" parent="." instance=ExtResource("46_i13q3")]
-root_path = NodePath("..")
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="skins" to="." method="_on_skins_pressed"]
-[connection signal="pressed" from="crdtsbuton" to="." method="_on_crdtsbuton_pressed"]
-[connection signal="pressed" from="quir" to="." method="_on_quir_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="discord" to="." method="_on_discord_pressed"]
 [connection signal="pressed" from="tiktiok" to="." method="_on_tiktiok_pressed"]
 [connection signal="pressed" from="youtube" to="." method="_on_youtube_pressed"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0pe5ludk0qpc"]
+[gd_scene load_steps=3 format=3 uid="uid://d0pe5ludk0qpc"]
 
 [ext_resource type="Script" uid="uid://do78efp4y7fs0" path="res://scripts/soundvolume.gd" id="1_hu163"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_efdf0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,14 +14,41 @@ script = ExtResource("1_hu163")
 
 [node name="MusicSlider" type="HSlider" parent="."]
 layout_mode = 0
-offset_right = 445.0
-offset_bottom = 16.0
+offset_left = 2.0
+offset_top = 120.0
+offset_right = 447.0
+offset_bottom = 136.0
+scale = Vector2(1.41042, 1.41042)
+step = 5.0
+value = 100.0
+rounded = true
 ticks_on_borders = true
 
 [node name="SFXSlider" type="HSlider" parent="."]
 layout_mode = 0
-offset_top = 22.0
+offset_top = 42.0
 offset_right = 445.0
-offset_bottom = 38.0
-tick_count = 10
+offset_bottom = 58.0
+scale = Vector2(1.41042, 1.41042)
+step = 5.0
+value = 100.0
+rounded = true
 ticks_on_borders = true
+
+[node name="SFX" type="Label" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 9.0
+offset_right = 391.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("2_efdf0")
+text = "SFX Volume"
+
+[node name="Music" type="Label" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 85.0
+offset_right = 402.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("2_efdf0")
+text = "Music Volume"

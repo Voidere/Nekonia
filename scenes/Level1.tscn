@@ -10377,7 +10377,6 @@ position_smoothing_speed = 4.0
 script = SubResource("GDScript_ol3bp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("4_jwvsr")]
 anchors_preset = 8
@@ -10388,7 +10387,6 @@ anchor_bottom = 0.5
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="Score_label" type="Label" parent="Player/CanvasLayer2"]
 anchors_preset = 1
@@ -10406,7 +10404,6 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="end_pop" parent="CanvasLayer" instance=ExtResource("31_4e5yt")]
 

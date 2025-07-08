@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn0kuxvtrrpni"]
+
+[ext_resource type="AudioStream" uid="uid://btjsu4pttcfey" path="res://assets/sounds/sfx/button.mp3" id="1_hux41"]
+[ext_resource type="AudioStream" uid="uid://dec413grlh3fc" path="res://assets/sounds/sfx/backbutton.mp3" id="2_v6v0x"]
+
+[node name="AudioManager" type="Node"]
+
+[node name="ButtonClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_hux41")
+bus = &"SFX"
+
+[node name="BackButtonClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v6v0x")
+bus = &"SFX"
