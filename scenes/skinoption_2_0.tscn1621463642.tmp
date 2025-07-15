@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://duu2h2d5a087l"]
+
+[ext_resource type="Script" uid="uid://bgxwyg15uhj0t" path="res://scenes/skinoption_2_0.gd" id="1_1lpb5"]
+[ext_resource type="Texture2D" uid="uid://kgrv3wx4cel" path="res://assets/skinwhitecat.png" id="2_fuw3f"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="3_dlbkh"]
+
+[node name="skinoption2_0" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lpb5")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/HBoxContainer/ColorRect"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -3.0
+offset_right = 273.0
+offset_bottom = 234.0
+texture = ExtResource("2_fuw3f")
+
+[node name="whitecat" type="Button" parent="ScrollContainer/HBoxContainer/ColorRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 208.0
+offset_right = 277.0
+offset_bottom = 286.0
+theme = ExtResource("3_dlbkh")
+text = "Select WhiteCat"

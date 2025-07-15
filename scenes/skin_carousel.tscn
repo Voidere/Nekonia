@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu5j35cch8es5"]
+
+[ext_resource type="Script" uid="uid://dyux5oq56cs4w" path="res://scripts/node_2d.gd" id="1_cg38g"]
+[ext_resource type="Texture2D" uid="uid://dajxqyr638eue" path="res://assets/sigmsil.png" id="3_j513s"]
+[ext_resource type="Texture2D" uid="uid://bcqr815eguobq" path="res://assets/skinB.png" id="4_28qfh"]
+[ext_resource type="Texture2D" uid="uid://kgrv3wx4cel" path="res://assets/skinwhitecat.png" id="5_b63wp"]
+[ext_resource type="Texture2D" uid="uid://bfrxct5u0rivt" path="res://assets/playbutton.png" id="6_cg38g"]
+[ext_resource type="Texture2D" uid="uid://7tw20m016ycg" path="res://assets/xamsskin.png" id="6_i3pj2"]
+
+[node name="SkinCarousel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cg38g")
+
+[node name="Center" type="Marker2D" parent="."]
+position = Vector2(579, 327)
+
+[node name="Skins" type="Node2D" parent="Center"]
+position = Vector2(152, 22)
+rotation = 3.12345
+
+[node name="Skin0" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 400.0
+offset_bottom = 402.0
+rotation = 0.0174533
+texture = ExtResource("6_i3pj2")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="Skin1" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_j513s")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="Skin2" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_28qfh")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="Skin3" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_b63wp")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="Skin4" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_i3pj2")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="Skin5" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_i3pj2")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="BtnLeft" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -70.0
+offset_bottom = 70.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("6_cg38g")
+expand_icon = true
+
+[node name="BtnRight" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 137.0
+offset_top = 56.0
+offset_right = 275.0
+offset_bottom = 196.0
+grow_vertical = 2
+rotation = 3.14159
+icon = ExtResource("6_cg38g")
+icon_alignment = 2
+expand_icon = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

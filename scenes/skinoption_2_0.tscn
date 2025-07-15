@@ -1,0 +1,592 @@
+[gd_scene load_steps=17 format=3 uid="uid://duu2h2d5a087l"]
+
+[ext_resource type="Script" uid="uid://bgxwyg15uhj0t" path="res://scenes/skinoption_2_0.gd" id="1_1lpb5"]
+[ext_resource type="Texture2D" uid="uid://kgrv3wx4cel" path="res://assets/skinwhitecat.png" id="2_fuw3f"]
+[ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="3_dlbkh"]
+[ext_resource type="Texture2D" uid="uid://6c5g5ip3b6da" path="res://assets/skinscat/skinOrangeCat.png" id="4_dlbkh"]
+[ext_resource type="Texture2D" uid="uid://bcqr815eguobq" path="res://assets/skinB.png" id="5_33bw3"]
+[ext_resource type="Texture2D" uid="uid://dajxqyr638eue" path="res://assets/sigmsil.png" id="6_ff72j"]
+[ext_resource type="Texture2D" uid="uid://bn3av0rjm1hgw" path="res://assets/xmasskin.png" id="7_u2wf6"]
+
+[sub_resource type="Animation" id="Animation_vps36"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("orange:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.45098, 0.45098, 0.45098, 1), Color(0.113725, 0.113725, 0.113725, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("white:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.45098, 0.45098, 0.45098, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.450648, 0.450648, 0.450648, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("silvester:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.114897, 0.114897, 0.114897, 1), Color(0.114897, 0.114897, 0.114897, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("xmas:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.114897, 0.114897, 0.114897, 1), Color(0.45098, 0.45098, 0.45098, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_05iy7"]
+resource_name = "carousell"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("orange:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.45098, 0.45098, 0.45098, 0.45098), Color(0.113725, 0.113725, 0.113725, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("white:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.45098, 0.45098, 0.45098, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.450648, 0.450648, 0.450648, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("silvester:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.114897, 0.114897, 0.114897, 1), Color(0.114897, 0.114897, 0.114897, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("xmas:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.114897, 0.114897, 0.114897, 1), Color(0.45098, 0.45098, 0.45098, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wded"]
+_data = {
+&"RESET": SubResource("Animation_vps36"),
+&"carousell": SubResource("Animation_05iy7")
+}
+
+[sub_resource type="Animation" id="Animation_ff72j"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("xmas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(360, 0), Vector2(80, 256)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("silvester:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(704, 0), Vector2(360, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.001, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(80, 256), Vector2(425, 468)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("white:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.001, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(426, 351), Vector2(768, 256)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("orange:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.001, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(768, 256), Vector2(704, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_33bw3"]
+resource_name = "position"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("orange:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(778, 265), Vector2(578, -36)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("white:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(426, 351), Vector2(777, 266)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(74, 266), Vector2(426, 350)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("silvester:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(580, -37), Vector2(249, -33)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("xmas:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(248, -34), Vector2(71, 265)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2wf6"]
+_data = {
+&"RESET": SubResource("Animation_ff72j"),
+&"position": SubResource("Animation_33bw3")
+}
+
+[sub_resource type="Animation" id="Animation_3wded"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("orange:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 298)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("white:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 297)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 298)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("silvester:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 298)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("xmas:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 298)]
+}
+
+[sub_resource type="Animation" id="Animation_u2wf6"]
+resource_name = "size"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("orange:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(302, 179), Vector2(88, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("white:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 297), Vector2(304, 192)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("black:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(302, 180), Vector2(319, 296)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("silvester:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(88, 64), Vector2(88, 64)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("xmas:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(88, 64), Vector2(304, 192)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rh5k6"]
+_data = {
+&"RESET": SubResource("Animation_3wded"),
+&"size": SubResource("Animation_u2wf6")
+}
+
+[node name="skinoption2_0" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lpb5")
+
+[node name="orange" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = -648.0
+offset_right = 428.0
+offset_bottom = -350.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.45098, 0.45098, 0.45098, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="orange"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -3.0
+offset_right = 278.0
+offset_bottom = 234.0
+texture = ExtResource("4_dlbkh")
+
+[node name="orangecat" type="Button" parent="orange"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 208.0
+offset_right = 282.0
+offset_bottom = 286.0
+theme = ExtResource("3_dlbkh")
+text = "Select OrangeCat"
+
+[node name="white" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_top = -392.0
+offset_right = 492.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="white"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -3.0
+offset_right = 273.0
+offset_bottom = 234.0
+texture = ExtResource("2_fuw3f")
+
+[node name="whitecat" type="Button" parent="white"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 208.0
+offset_right = 277.0
+offset_bottom = 286.0
+theme = ExtResource("3_dlbkh")
+text = "Select WhiteCat"
+
+[node name="black" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -180.0
+offset_right = 149.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.450648, 0.450648, 0.450648, 1)
+
+[node name="TextureRect3" type="TextureRect" parent="black"]
+layout_mode = 0
+offset_left = 31.0
+offset_right = 280.0
+offset_bottom = 237.0
+texture = ExtResource("5_33bw3")
+
+[node name="blackcat" type="Button" parent="black"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 211.0
+offset_right = 297.0
+offset_bottom = 289.0
+theme = ExtResource("3_dlbkh")
+text = "Select 	BlackCat"
+
+[node name="silvester" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 360.0
+offset_right = 660.0
+offset_bottom = 298.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect4" type="TextureRect" parent="silvester"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 18.0
+offset_right = 260.0
+offset_bottom = 230.0
+scale = Vector2(1.08, 1)
+texture = ExtResource("6_ff72j")
+expand_mode = 3
+
+[node name="sylvester" type="Button" parent="silvester"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 211.0
+offset_right = 284.0
+offset_bottom = 289.0
+theme = ExtResource("3_dlbkh")
+text = "Select 
+SylvesterCat"
+
+[node name="xmas" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 80.0
+offset_top = 256.0
+offset_right = 380.0
+offset_bottom = 554.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="wintercat" type="Button" parent="xmas"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 211.0
+offset_right = 284.0
+offset_bottom = 289.0
+theme = ExtResource("3_dlbkh")
+text = "Select WinterCat"
+
+[node name="TextureRect5" type="TextureRect" parent="xmas"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 16.0
+offset_right = 285.0
+offset_bottom = 253.0
+scale = Vector2(0.906302, 0.906302)
+texture = ExtResource("7_u2wf6")
+
+[node name="Colour" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3wded")
+}
+autoplay = "carousell"
+
+[node name="postion" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u2wf6")
+}
+autoplay = "position"
+
+[node name="size" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rh5k6")
+}
+autoplay = "size"
