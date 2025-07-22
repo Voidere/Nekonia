@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://bdtaf8xqbahsj"]
 
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_hy2yb"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="1_hy2yb"]
 [ext_resource type="Script" uid="uid://c6f7eng7iqxx" path="res://scripts/credits.gd" id="1_ylpan"]
 [ext_resource type="Texture2D" uid="uid://yab0qgs7a0w5" path="res://assets/Mushroom_Cave-Sheet.png" id="2_md0v5"]
 [ext_resource type="Texture2D" uid="uid://cf3346rbdimdg" path="res://assets/LunarDrift Studios (1).png" id="3_ujuil"]

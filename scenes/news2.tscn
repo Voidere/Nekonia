@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c6hrfo42mhvcq"]
 
 [ext_resource type="Script" uid="uid://4rr8h8x8v2b1" path="res://scripts/news2.gd" id="1_hk1yh"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_bfjuf"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="2_bfjuf"]
 [ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_sct0r"]
 [ext_resource type="FontFile" uid="uid://0nyawcbtrbur" path="res://assets/fonts/PixelOperator8.ttf" id="3_0gads"]
 [ext_resource type="Texture2D" uid="uid://00cfxmx2cpnt" path="res://assets/lig.png" id="5_ikgdm"]

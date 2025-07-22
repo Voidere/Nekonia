@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c4hq1l2urbi22" path="res://scenes/boss.tscn" id="3_r8kwd"]
 [ext_resource type="PackedScene" uid="uid://dd8dca3h0g2dn" path="res://scenes/healthbar.tscn" id="4_dx3ep"]
 [ext_resource type="Texture2D" uid="uid://c8rhm1xq8q5pm" path="res://assets/paw.png" id="5_3ij7a"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_5w34c"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="5_5w34c"]
 [ext_resource type="TileSet" uid="uid://dwyaquv4228v1" path="res://assets/game/dungeontileset.tres" id="8_ublqr"]
 [ext_resource type="Texture2D" uid="uid://8homir5cwlt2" path="res://assets/hause30.png" id="11_y1nx4"]
 [ext_resource type="Script" uid="uid://guq8e1qqqukv" path="res://scripts/npc.gd" id="12_juo1t"]

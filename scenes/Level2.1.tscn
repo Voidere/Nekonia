@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bj4xkktd80hbi" path="res://scenes/skinpopup.tscn" id="18_vlar8"]
 [ext_resource type="PackedScene" uid="uid://bop380e8bgiiu" path="res://scenes/area_2d.tscn" id="21_fnke3"]
 [ext_resource type="Script" uid="uid://cupudb7d5tayv" path="res://scripts/nbnlvltur.gd" id="22_fv2yr"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="23_yonb0"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="23_yonb0"]
 
 [sub_resource type="GDScript" id="GDScript_ck6q8"]
 script/source = "extends Camera2D

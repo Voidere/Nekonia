@@ -3,11 +3,11 @@ extends Control
 @onready var h_box_container: HBoxContainer = $HBoxContainer
 @onready var button_right: Button = $button_right
 @onready var button_left: Button = $button_left
-@onready var button_play: Button = $button_play  # Falls noch nicht deklariert
+# @onready var button_play: Button = $button_play  # Falls noch nicht deklariert
 
 var level_width := 1156
-var current_index := 0
-var max_index := 4  # z. B. 4 Levels → max_index = 3
+var current_index := 2
+var max_index := 6  # z. B. 4 Levels → max_index = 3
 var level_paths := [
 	"res://scenes/Level1.tscn",
 	"res://scenes/Level2.tscn",

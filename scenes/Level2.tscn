@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bop380e8bgiiu" path="res://scenes/area_2d.tscn" id="11_3fm4y"]
 [ext_resource type="Texture2D" uid="uid://o0sftcj8a2d2" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Hazel Tree.png" id="11_x0u7e"]
 [ext_resource type="Texture2D" uid="uid://j5i7eb6ousxl" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Maple Tree.png" id="12_ans2m"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="12_fl5cq"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="12_fl5cq"]
 [ext_resource type="Texture2D" uid="uid://ch4m178iqdjd8" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Oak Tree.png" id="13_hk1p0"]
 [ext_resource type="Texture2D" uid="uid://cci0n6wa2vetv" path="res://assets/PixelFlush - Pixel Tree Mega Pack/pngs/Willow Tree.png" id="14_6vmvl"]
 [ext_resource type="PackedScene" uid="uid://bnto4y1m70g83" path="res://scenes/enemybat.tscn" id="14_xy8oe"]

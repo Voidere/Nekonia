@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://duiko0o4r2sf0" path="res://assets/pixil-frame-0 (9).png" id="3_gtiq2"]
 [ext_resource type="Texture2D" uid="uid://bw5k7x3mv7e4b" path="res://assets/Cave Tileset/_Complete_static_BG_(288 x 208).png" id="4_lfonr"]
 [ext_resource type="PackedScene" uid="uid://bdbf2jw20vp12" path="res://scenes/PauseMenu.tscn" id="4_q32b4"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_cntn4"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="5_cntn4"]
 [ext_resource type="Texture2D" uid="uid://bi6j6bgwx6toh" path="res://assets/Cave Tileset/Brown_Tile_Terrain (16 x 16).png" id="5_kegch"]
 [ext_resource type="Texture2D" uid="uid://cfcdq1v1k703k" path="res://assets/lamp-post.png" id="5_m0ni5"]
 [ext_resource type="Texture2D" uid="uid://bwce5mw05afn0" path="res://assets/Winter assets new.png" id="6_08o1o"]

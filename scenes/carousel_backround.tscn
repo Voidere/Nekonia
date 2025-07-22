@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0vbuqx3lpb0b"]
+
+[ext_resource type="Shader" uid="uid://b54nxwcx2ssge" path="res://assets/game/PauseMenu.gdshader" id="1_616g0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0wyx"]
+shader = ExtResource("1_616g0")
+shader_parameter/amount = 3.0
+
+[node name="Carousel_backround" type="Control"]
+z_index = -10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+material = SubResource("ShaderMaterial_j0wyx")
+layout_mode = 0
+offset_left = -2480.0
+offset_top = -764.0
+offset_right = 2079.0
+offset_bottom = 1265.0

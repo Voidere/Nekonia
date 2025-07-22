@@ -3,7 +3,7 @@ extends Control
 func _on_start_button_pressed() -> void:
 	AudioManager.play_button_click()
 	await get_tree().create_timer(0.15).timeout
-	get_tree().change_scene_to_file("res://scenes/levels.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels2.0.tscn")
 	
 func _on_quit_pressed() -> void:
 	AudioManager.play_back_button_click()
@@ -38,4 +38,4 @@ func _on_settings_pressed() -> void:
 func _on_skins_pressed() -> void:
 	AudioManager.play_button_click()
 	await get_tree().create_timer(0.15).timeout
-	get_tree().change_scene_to_file("res://scenes/skinoptions.tscn")
+	get_tree().change_scene_to_file("res://scenes/skin_carousel.tscn")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0pe5ludk0qpc"]
 
 [ext_resource type="Script" uid="uid://do78efp4y7fs0" path="res://scripts/soundvolume.gd" id="1_hu163"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_efdf0"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="2_efdf0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddboeb88t4pvk" path="res://scripts/levels_2.0.gd" id="1_qewaf"]
 [ext_resource type="Texture2D" uid="uid://x44u7k42ry25" path="res://assets/KenoStuff/level1.PNG" id="2_c1c67"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_cnmo0"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="2_cnmo0"]
 [ext_resource type="Texture2D" uid="uid://b8nas5b508q8c" path="res://assets/KenoStuff/level2.PNG" id="4_6xou3"]
 [ext_resource type="PackedScene" uid="uid://b0rwkhogu30y4" path="res://multiplayer/game/join.tscn" id="4_8bswv"]
 [ext_resource type="Texture2D" uid="uid://dw74f51a2lhuu" path="res://assets/KenoStuff/sprite4a.PNG" id="5_8bswv"]

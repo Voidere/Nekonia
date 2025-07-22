@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://x6qb2nwlmya1" path="res://assets/Tiles.png" id="11_wjsey"]
 [ext_resource type="Texture2D" uid="uid://b57e2jf03it7v" path="res://assets/Buildings.png" id="12_gbeqq"]
 [ext_resource type="Texture2D" uid="uid://d05gfuouher7t" path="res://assets/Dungeon Tile Set/Dungeon Tile Set.png" id="13_34dnw"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="13_rh81g"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="13_rh81g"]
 [ext_resource type="PackedScene" uid="uid://qbvoktsirurv" path="res://scenes/end_door.tscn" id="14_ynbpo"]
 [ext_resource type="PackedScene" uid="uid://dbfcjfo66fqvb" path="res://scenes/killzone_2_0.tscn" id="15_k2fqo"]
 [ext_resource type="PackedScene" uid="uid://c0ymqq55623o3" path="res://scenes/edpop3.tscn" id="16_wt68v"]

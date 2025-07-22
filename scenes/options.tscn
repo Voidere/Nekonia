@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d2hvpgpj6ydie" path="res://scripts/options.gd" id="1_1bqlf"]
 [ext_resource type="Theme" uid="uid://dj76vu4xs6qmx" path="res://assets/game/new_theme.tres" id="2_aaveb"]
 [ext_resource type="Texture2D" uid="uid://d22q6ufgfp213" path="res://assets/back.png" id="4_21jhf"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_28wo4"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="4_28wo4"]
 [ext_resource type="PackedScene" uid="uid://d0pe5ludk0qpc" path="res://scenes/soundvolume.tscn" id="5_1sggn"]
 
 [node name="options" type="Control"]

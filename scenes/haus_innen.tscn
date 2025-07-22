@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://63mbgtuo5l3f" path="res://assets/Sprites/11-Door/Opening (46x56).png" id="3_phbay"]
 [ext_resource type="Texture2D" uid="uid://dafm0ux0mbqai" path="res://assets/Sprites/13-Dialogue Boxes/Interrogation In (24x8).png" id="4_avx00"]
 [ext_resource type="Texture2D" uid="uid://dsp3p4jg580s1" path="res://assets/biref item gros.png" id="4_e4268"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_1osiy"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="5_1osiy"]
 [ext_resource type="Texture2D" uid="uid://85nv1w8pdg0u" path="res://assets/couch.png" id="5_lmhqo"]
 [ext_resource type="Texture2D" uid="uid://5h7gfjexm8h1" path="res://assets/Assets.png" id="6_a658e"]
 [ext_resource type="Texture2D" uid="uid://dp5yoecnooh12" path="res://assets/Sprites/11-Door/Idle.png" id="6_jdshp"]

@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cu5j35cch8es5"]
+[gd_scene load_steps=13 format=3 uid="uid://cu5j35cch8es5"]
 
-[ext_resource type="Script" uid="uid://dyux5oq56cs4w" path="res://scripts/node_2d.gd" id="1_cg38g"]
+[ext_resource type="Script" uid="uid://dyux5oq56cs4w" path="res://scripts/carousel.gd" id="1_cg38g"]
+[ext_resource type="Texture2D" uid="uid://dhboawgpw04gc" path="res://assets/KenoStuff/backround.PNG" id="2_a5unw"]
+[ext_resource type="Texture2D" uid="uid://qnjrbalftuld" path="res://assets/skinscat/Cat/skinB.png" id="2_b63wp"]
 [ext_resource type="Texture2D" uid="uid://dajxqyr638eue" path="res://assets/sigmsil.png" id="3_j513s"]
-[ext_resource type="Texture2D" uid="uid://bcqr815eguobq" path="res://assets/skinB.png" id="4_28qfh"]
+[ext_resource type="Texture2D" uid="uid://baw3c2pr314jb" path="res://assets/skinscat/Cat/skinwhitecat.png" id="4_i3pj2"]
+[ext_resource type="Texture2D" uid="uid://opgdwxkemmnq" path="res://assets/skinscat/Cat/cyborgcat_organgev2.png" id="4_mqw4r"]
 [ext_resource type="Texture2D" uid="uid://kgrv3wx4cel" path="res://assets/skinwhitecat.png" id="5_b63wp"]
+[ext_resource type="Texture2D" uid="uid://6c5g5ip3b6da" path="res://assets/skinscat/skinOrangeCat.png" id="6_28qfh"]
 [ext_resource type="Texture2D" uid="uid://bfrxct5u0rivt" path="res://assets/playbutton.png" id="6_cg38g"]
 [ext_resource type="Texture2D" uid="uid://7tw20m016ycg" path="res://assets/xamsskin.png" id="6_i3pj2"]
+[ext_resource type="Theme" uid="uid://bvc0w43to7qds" path="res://assets/own/button2.tres" id="11_a5unw"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="12_cceix"]
 
 [node name="SkinCarousel" type="Control"]
 layout_mode = 3
@@ -15,6 +21,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cg38g")
+depth_alpha = 0.3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1000
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_a5unw")
 
 [node name="Center" type="Marker2D" parent="."]
 position = Vector2(579, 327)
@@ -28,10 +42,19 @@ custom_minimum_size = Vector2(400, 400)
 offset_right = 400.0
 offset_bottom = 402.0
 rotation = 0.0174533
-texture = ExtResource("6_i3pj2")
+texture = ExtResource("2_b63wp")
 expand_mode = 3
 stretch_mode = 4
 flip_v = true
+
+[node name="Black" type="Button" parent="Center/Skins/Skin0"]
+z_index = -1
+layout_mode = 0
+offset_left = 350.0
+offset_top = 286.0
+offset_right = 645.0
+offset_bottom = 477.0
+rotation = -3.14159
 
 [node name="Skin1" type="TextureRect" parent="Center/Skins"]
 custom_minimum_size = Vector2(400, 400)
@@ -42,14 +65,34 @@ expand_mode = 3
 stretch_mode = 4
 flip_v = true
 
+[node name="idk yet" type="Button" parent="Center/Skins/Skin1"]
+z_index = -1
+layout_mode = 0
+offset_left = 345.0
+offset_top = 289.0
+offset_right = 638.0
+offset_bottom = 483.0
+rotation = -3.14159
+text = "
+"
+
 [node name="Skin2" type="TextureRect" parent="Center/Skins"]
 custom_minimum_size = Vector2(400, 400)
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("4_28qfh")
+texture = ExtResource("4_mqw4r")
 expand_mode = 3
 stretch_mode = 4
 flip_v = true
+
+[node name="cyborg" type="Button" parent="Center/Skins/Skin2"]
+z_index = -1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 289.0
+offset_right = 635.0
+offset_bottom = 481.0
+rotation = -3.14159
 
 [node name="Skin3" type="TextureRect" parent="Center/Skins"]
 custom_minimum_size = Vector2(400, 400)
@@ -60,6 +103,15 @@ expand_mode = 3
 stretch_mode = 4
 flip_v = true
 
+[node name="silvester" type="Button" parent="Center/Skins/Skin3"]
+z_index = -1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 289.0
+offset_right = 639.0
+offset_bottom = 479.0
+rotation = -3.14159
+
 [node name="Skin4" type="TextureRect" parent="Center/Skins"]
 custom_minimum_size = Vector2(400, 400)
 offset_right = 40.0
@@ -69,14 +121,50 @@ expand_mode = 3
 stretch_mode = 4
 flip_v = true
 
+[node name="xmas" type="Button" parent="Center/Skins/Skin4"]
+z_index = -1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 326.0
+offset_right = 639.0
+offset_bottom = 553.0
+rotation = -3.14159
+
 [node name="Skin5" type="TextureRect" parent="Center/Skins"]
 custom_minimum_size = Vector2(400, 400)
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("6_i3pj2")
+texture = ExtResource("4_i3pj2")
 expand_mode = 3
 stretch_mode = 4
 flip_v = true
+
+[node name="white" type="Button" parent="Center/Skins/Skin5"]
+z_index = -1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 289.0
+offset_right = 639.0
+offset_bottom = 483.0
+rotation = -3.14159
+
+[node name="Skin6" type="TextureRect" parent="Center/Skins"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_28qfh")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="orange" type="Button" parent="Center/Skins/Skin6"]
+z_index = -1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 289.0
+offset_right = 639.0
+offset_bottom = 483.0
+rotation = -3.14159
 
 [node name="BtnLeft" type="Button" parent="."]
 layout_mode = 1
@@ -108,4 +196,35 @@ icon = ExtResource("6_cg38g")
 icon_alignment = 2
 expand_icon = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -103.0
+offset_right = 232.0
+grow_vertical = 0
+theme = ExtResource("11_a5unw")
+theme_override_fonts/font = ExtResource("12_cceix")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="Levels" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -112.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("11_a5unw")
+theme_override_fonts/font = ExtResource("12_cceix")
+theme_override_font_sizes/font_size = 32
+text = "Levles"
+
+[connection signal="pressed" from="Center/Skins/Skin5/white" to="." method="_on_white_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Levels" to="." method="_on_levels_pressed"]

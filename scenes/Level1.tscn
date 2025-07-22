@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c4dm57ql6l7it" path="res://scripts/game_manager.gd" id="2_rqlgo"]
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="3_wxkcb"]
 [ext_resource type="PackedScene" uid="uid://bdbf2jw20vp12" path="res://scenes/PauseMenu.tscn" id="4_jwvsr"]
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_j4jk6"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="5_j4jk6"]
 [ext_resource type="Texture2D" uid="uid://x6qb2nwlmya1" path="res://assets/Tiles.png" id="6_dh884"]
 [ext_resource type="Texture2D" uid="uid://b57e2jf03it7v" path="res://assets/Buildings.png" id="7_mhxn4"]
 [ext_resource type="Texture2D" uid="uid://ckvbd745d2bpx" path="res://assets/Props-01.png" id="8_iuehs"]

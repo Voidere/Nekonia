@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=10 format=3 uid="uid://lq3vcpfi0rpt"]
 
-[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_ap33m"]
+[ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="1_ap33m"]
 [ext_resource type="Texture2D" uid="uid://dax0sqtkkjg4q" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/wineter3.png" id="2_3ccof"]
 [ext_resource type="Texture2D" uid="uid://jgd6pwq0p56c" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/wineter2.png" id="2_tsdkb"]
 [ext_resource type="Texture2D" uid="uid://brble0stpyg53" path="res://assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Spritesheets/wineter.png" id="3_ef00s"]
