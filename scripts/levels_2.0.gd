@@ -9,7 +9,9 @@ var level_width := 1156
 var current_index := 2
 var max_index := 6  # z. B. 4 Levels → max_index = 3
 var level_paths := [
-	"res://scenes/Level1.tscn",
+	"res://scenes/credits.tscn",  #als platzhalter für multyplayer
+	"res://scenes/dungeon.tscn",  #als platzhalter für multyplayer
+	"res://scenes/Level1.tscn",   
 	"res://scenes/Level2.tscn",
 	"res://scenes/Level3.tscn",
 	"res://scenes/level_4.tscn",
@@ -23,8 +25,12 @@ func _ready():
 	h_scroll_bar.page = level_width
 	h_scroll_bar.max_value = level_width * max_index
 
+	# Setze den Scrollbar-Wert direkt auf den Startindex!
+	h_scroll_bar.value = current_index * level_width
+
 	button_left.pressed.connect(_on_left_pressed)
 	button_right.pressed.connect(_on_right_pressed)
+
 
 func _process(delta):
 	h_box_container.position.x = -h_scroll_bar.value
