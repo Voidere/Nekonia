@@ -28,6 +28,7 @@ GameServerManager="*res://localmultiplayer/scripts/GameServerManager.gd"
 Lobby="*res://multiplayer/client/lobby.gd"
 AudioManager="*res://scripts/AudioManager.gd"
 Client="*res://multiplayer/client/multiplayer_client.gd"
+Lobby="*res://multiplayer/demo/lobby.gd"
 
 [display]
 
