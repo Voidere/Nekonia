@@ -68,16 +68,16 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Get the input direction
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	#flip idiot
+	# Flip sprite
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:
 		animated_sprite.flip_h = true
 	
+	# Animations
 	if onLadder:
 		animated_sprite.play("climb") 
 	elif is_on_floor():
@@ -87,13 +87,23 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("run")
 	else:
 		animated_sprite.play("jump")
-	#move
+
+	# Movement
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	# ⬇ NEU: Kollisionen prüfen und Impuls geben
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is RigidBody2D:
+			var impulse = velocity * collider.mass * 0.1
+			collider.apply_central_impulse(impulse)
+
 
 
 func take_damage():

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp5xqkrs7a01r"]
+
+[ext_resource type="PackedScene" uid="uid://bbhr66pcm4r3u" path="res://scenes/ropesegments.tscn" id="2_ghbyf"]
+[ext_resource type="Script" uid="uid://bg42g63li4854" path="res://scenes/ropesegments.gd" id="3_vlfmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghbyf"]
+size = Vector2(8, 8)
+
+[node name="rope" type="Node2D"]
+position = Vector2(154, 46)
+metadata/_edit_horizontal_guides_ = [18.0]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(13, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_ghbyf")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(19, 7)
+node_a = NodePath("../StaticBody2D")
+node_b = NodePath("../ropesegments4")
+softness = 1.0
+motor_target_velocity = 1.74533
+
+[node name="ropesegments4" parent="." instance=ExtResource("2_ghbyf")]
+position = Vector2(20, 24)
+mass = 1.0
+gravity_scale = 0.5
+script = ExtResource("3_vlfmi")
+
+[node name="ropesegments" parent="." instance=ExtResource("2_ghbyf")]
+position = Vector2(20, 54)
+mass = 1.0
+gravity_scale = 0.5
+
+[node name="ropesegments2" parent="." instance=ExtResource("2_ghbyf")]
+position = Vector2(20, 84)
+mass = 1.0
+gravity_scale = 0.5
+
+[node name="ropesegments3" parent="." instance=ExtResource("2_ghbyf")]
+position = Vector2(20, 114)
+mass = 1.0
+gravity_scale = 0.5
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(20, 38)
+node_a = NodePath("../ropesegments4")
+node_b = NodePath("../ropesegments")
+softness = 1.0
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(20, 69)
+node_a = NodePath("../ropesegments")
+node_b = NodePath("../ropesegments2")
+softness = 1.0
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(20, 99)
+node_a = NodePath("../ropesegments2")
+node_b = NodePath("../ropesegments3")
+softness = 1.0
