@@ -26,7 +26,7 @@ motor_target_velocity = 1.74533
 
 [node name="ropesegments4" parent="." instance=ExtResource("2_ghbyf")]
 position = Vector2(20, 24)
-mass = 1.0
+mass = 9.363
 gravity_scale = 0.5
 script = ExtResource("3_vlfmi")
 

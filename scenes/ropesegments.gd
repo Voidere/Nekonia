@@ -10,5 +10,5 @@ func _physics_process(delta):
 	if time_passed >= swing_interval:
 		direction *= -1 # Richtung wechseln
 		time_passed = 0.0
-	
-	apply_central_force(Vector2(swing_force * direction, 0))
+		# sanfter Schubs wie dein altes Force, aber nur 1x
+		apply_central_impulse(Vector2(swing_force * direction, 0))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://crlkl6dfq8g0l"]
+[gd_scene load_steps=72 format=4 uid="uid://crlkl6dfq8g0l"]
 
 [ext_resource type="Script" uid="uid://dil866ws511uy" path="res://scripts/jungels_level_2.gd" id="1_oe8kb"]
 [ext_resource type="Texture2D" uid="uid://cgtr66xjfjrxy" path="res://assets/jungles.png" id="1_u8h52"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://dc7p07xbpvfhc" path="res://assets/ELR_SpringlLeaf.png" id="23_dkk7o"]
 [ext_resource type="Texture2D" uid="uid://c72hnuplyxlyr" path="res://assets/Planets/Black_hole.png" id="23_wuhgw"]
 [ext_resource type="Texture2D" uid="uid://d05gfuouher7t" path="res://assets/Dungeon Tile Set/Dungeon Tile Set.png" id="24_new6t"]
+[ext_resource type="PackedScene" uid="uid://bp5xqkrs7a01r" path="res://scenes/rope.tscn" id="42_iajuw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vr4rw"]
 distance = -2.46356
@@ -2094,7 +2095,7 @@ position = Vector2(1470, -584)
 position = Vector2(1470, -584)
 
 [node name="Enemy2" parent="." instance=ExtResource("14_xy8oe")]
-position = Vector2(90, -36)
+position = Vector2(91, -90)
 
 [node name="coins" type="Node" parent="."]
 
@@ -2459,6 +2460,9 @@ position = Vector2(212, -375)
 scale = Vector2(0.0458068, 0.0603026)
 color = Color(0.692066, 0, 0.0190765, 1)
 texture = SubResource("GradientTexture2D_8adtd")
+
+[node name="rope" parent="." instance=ExtResource("42_iajuw")]
+position = Vector2(279, -115)
 
 [connection signal="body_entered" from="End_door" to="." method="_on_end_door_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

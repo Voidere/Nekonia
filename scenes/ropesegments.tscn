@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbhr66pcm4r3u"]
+[gd_scene load_steps=4 format=3 uid="uid://bbhr66pcm4r3u"]
 
 [ext_resource type="Texture2D" uid="uid://7kk5fxase3wi" path="res://assets/KenoStuff/ranken_swing_1.png" id="1_f4tif"]
+[ext_resource type="PackedScene" uid="uid://euimrmjjxn4l" path="res://scenes/ladder.tscn" id="2_t5ja4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4tif"]
 radius = 5.0
@@ -17,3 +18,6 @@ shape = SubResource("CapsuleShape2D_f4tif")
 position = Vector2(0, -1)
 scale = Vector2(1.54687, 1.91757)
 texture = ExtResource("1_f4tif")
+
+[node name="ladder" parent="." instance=ExtResource("2_t5ja4")]
+scale = Vector2(0.48, 1.6)
