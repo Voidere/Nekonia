@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://dgq14nic0u2eg"]
 
-[ext_resource type="Script" uid="uid://b2y8u2qi2d75j" path="res://multiplayer/game/level.gd" id="1_64v6c"]
-[ext_resource type="PackedScene" uid="uid://cd4xuxqi1qlty" path="res://multiplayer/game/player.tscn" id="2_ombfp"]
+[ext_resource type="Script" uid="uid://b2y8u2qi2d75j" path="res://multiplayer/demo/level.gd" id="1_64v6c"]
+[ext_resource type="PackedScene" uid="uid://cd4xuxqi1qlty" path="res://multiplayer/demo/player.tscn" id="2_ombfp"]
 [ext_resource type="Texture2D" uid="uid://dq87s7mc6ok3g" path="res://assets/Super Mountain Dusk Files/Assets/version A/Previews/Mountain-Dusk.png" id="3_6ureb"]
 [ext_resource type="Texture2D" uid="uid://dwrfvfjdv5jpt" path="res://localmultiplayer/tileset.png" id="4_tsv1l"]
 
@@ -11,6 +11,7 @@ texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 
 [sub_resource type="TileSet" id="TileSet_66pxm"]
 tile_size = Vector2i(8, 8)
@@ -32,7 +33,6 @@ tile_set = SubResource("TileSet_66pxm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(125, 40)
-zoom = Vector2(3, 3)
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://cd4xuxqi1qlty")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpwp4xx6mv5p"]
 
-[ext_resource type="Script" uid="uid://bofadb3l5qeg8" path="res://multiplayer/game/host.gd" id="1_8yxey"]
+[ext_resource type="Script" uid="uid://bofadb3l5qeg8" path="res://multiplayer/demo/host.gd" id="1_8yxey"]
 [ext_resource type="Theme" uid="uid://bvc0w43to7qds" path="res://assets/own/button2.tres" id="2_rsfcp"]
 
 [node name="ClientUI" type="Control"]

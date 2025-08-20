@@ -1,6 +1,6 @@
 extends Control
 
-var URL = "ws://localhost:8080"
+var URL = "wss://mysignalling-production.up.railway.app:8080"
 
 @onready var host = $VBoxContainer/Connect/Host
 @onready var room = $VBoxContainer/Connect/RoomSecret
@@ -48,12 +48,12 @@ func _lobby_joined(lobby):
 func _lobby_sealed():
 	_log("[Signaling] Lobby has been sealed")
 	# Host instructs everybody to switch scenes
-	Lobby.load_game.rpc("res://multiplayer/game/level.tscn")
+	Lobby.load_game.rpc("res://multiplayer/demo/level.tscn")
 
 
 func _log(msg):
 	print(msg)
-	$VBoxContainer/TextEdit.text += str(msg) + "\n"
+	#$VBoxContainer/TextEdit.text += str(msg) + "\n"
 
 func _on_join_pressed():
 	Client.start(URL, "", true)

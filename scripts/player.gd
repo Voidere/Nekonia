@@ -108,11 +108,11 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return  # Skip normal movement while on rope
 
-	# ---------------------
-	# Normal movement
-	# ---------------------
 	if onLadder:
-		animated_sprite.play("climb")
+		if velocity.y != 0:  
+			animated_sprite.play("climb")
+		else:
+			animated_sprite.play("climb_idle")
 	elif is_on_floor():
 		if direction == 0:
 			animated_sprite.play("idle")
@@ -120,6 +120,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("run")
 	else:
 		animated_sprite.play("jump")
+
 
 	if direction != 0:
 		velocity.x = direction * SPEED
