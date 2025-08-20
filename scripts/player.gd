@@ -1,26 +1,27 @@
 extends CharacterBody2D
 
-const SPEED = 175.0
-const JUMP_VELOCITY = -320.0
+@export var SPEED = 175.0
+@export var JUMP_VELOCITY = -320.0
+@export var swing_force = 400.0
+@export var swing_interval = 1.3
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var hearts_parent = get_node_or_null("$healtyhbarplayer/HBoxContainer")
+@onready var hearts_parent = $healtyhbarplayer/HBoxContainer
+@onready var rope_detector = $RopeDetector
 
 var onLadder = false
 var current_skin = "default"
-var popup: PopupPanel
-
 var hearts_list: Array[TextureRect] = []
 var health = 3
 
-# Rope variables
-var grab_joint: PinJoint2D = null
-var grabbed_rope: RigidBody2D = null
+# Grab Variables
+var grabbed_joint: PinJoint2D = null
+var grabbed_segment: RigidBody2D = null
 
 func _ready():
 	Global.connect("skin_equip_requested", Callable(self, "_on_skin_equip_requested"))
 	change_skin(Global.current_skin)
-	
+
 	if hearts_parent:
 		for child in hearts_parent.get_children():
 			hearts_list.append(child)
@@ -48,26 +49,56 @@ func _on_player_died():
 	Global.is_alive = false
 	animated_sprite.play("die")
 
-# Rope helper functions
-func grab_rope(rope_segment: RigidBody2D):
-	if grab_joint: 
-		return
-	grabbed_rope = rope_segment
-	grab_joint = PinJoint2D.new()
-	grab_joint.node_a = get_path()
-	grab_joint.node_b = rope_segment.get_path()
-	get_parent().add_child(grab_joint)
-	velocity = Vector2.ZERO
-
-func release_rope():
-	if grab_joint:
-		grab_joint.queue_free()
-	grab_joint = null
-	grabbed_rope = null
-
 func _physics_process(delta: float) -> void:
 	# ---------------------
-	# Ladder / normal movement
+	# Grab / Release Logic
+	# ---------------------
+	if Input.is_action_just_pressed("use"):
+		if grabbed_joint:
+			# Release
+			grabbed_joint.queue_free()
+			grabbed_joint = null
+			grabbed_segment = null
+			onLadder = false
+		else:
+			# Check for overlapping vine segments
+			var bodies = rope_detector.get_overlapping_bodies()
+			for body in bodies:
+				if body.is_in_group("vine_segment"):
+					grabbed_segment = body
+					# Create PinJoint2D
+					grabbed_joint = PinJoint2D.new()
+					grabbed_joint.node_a = self.get_path()
+					grabbed_joint.node_b = grabbed_segment.get_path()
+					grabbed_joint.position = global_position
+					grabbed_joint.softness = 1.0 # Sanfte Verbindung
+					get_parent().add_child(grabbed_joint)
+					onLadder = true
+					break
+
+	# ---------------------
+	# Hanging / Swinging
+	# ---------------------
+	if grabbed_joint and grabbed_segment:
+		# Stop rotation
+		rotation = 0
+
+		# Swing with left/right input
+		if Input.is_action_pressed("move_left"):
+			grabbed_segment.apply_central_impulse(Vector2(-swing_force * delta, 0))
+		if Input.is_action_pressed("move_right"):
+			grabbed_segment.apply_central_impulse(Vector2(swing_force * delta, 0))
+
+		# Player follows segment sanft
+		global_position = global_position.move_toward(grabbed_segment.global_position, 15 * delta)
+		velocity = Vector2.ZERO
+
+		# Play climb animation
+		animated_sprite.play("climb")
+		return # Skip normal movement while hanging
+
+	# ---------------------
+	# Normal movement / Ladder
 	# ---------------------
 	if onLadder:
 		if Input.is_action_pressed("jump"):
@@ -79,8 +110,8 @@ func _physics_process(delta: float) -> void:
 	elif not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump from floor
-	if Input.is_action_just_pressed("jump") and is_on_floor() and not grabbed_rope:
+	# Jump from floor
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get input direction
@@ -92,6 +123,7 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		animated_sprite.flip_h = true
 
+<<<<<<< Updated upstream
 	# ---------------------
 	# Rope-hanging logic
 	# ---------------------
@@ -108,6 +140,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return  # Skip normal movement while on rope
 
+=======
+	# Animations
+>>>>>>> Stashed changes
 	if onLadder:
 		if velocity.y != 0:  
 			animated_sprite.play("climb")
@@ -121,7 +156,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.play("jump")
 
+<<<<<<< Updated upstream
 
+=======
+	# Movement
+>>>>>>> Stashed changes
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
@@ -129,14 +168,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	# ---------------------
 	# Physics interaction with RigidBody2D
-	# ---------------------
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider is RigidBody2D:
-			var impulse = velocity * collider.mass * 0.1
+			var impulse = velocity * collider.mass * 0.05 # nur sanfter Anschub
 			collider.apply_central_impulse(impulse)
 
 func take_damage():
