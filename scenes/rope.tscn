@@ -33,8 +33,8 @@ mass = 3.0
 linear_damp = 2.0
 angular_damp = 2.0
 script = ExtResource("2_vlfmi")
-swing_force = 100.0
-swing_interval = 1.3
+swing_force = 400.0
+swing_interval = 1.0
 
 [node name="ropesegments" parent="." instance=ExtResource("2_ghbyf")]
 position = Vector2(20, 54)

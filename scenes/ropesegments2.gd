@@ -1,7 +1,7 @@
 # rope_segment.gd
 extends RigidBody2D
 
-@export var swing_force = 400.0
+@export var swing_force = 300.0
 @export var swing_interval = 1.3
 
 var time_passed = 0.0

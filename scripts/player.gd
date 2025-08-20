@@ -83,19 +83,19 @@ func _physics_process(delta: float) -> void:
 		# Stop rotation
 		rotation = 0
 
-		# Swing with left/right input
-		if Input.is_action_pressed("move_left"):
-			grabbed_segment.apply_central_impulse(Vector2(-swing_force * delta, 0))
-		if Input.is_action_pressed("move_right"):
-			grabbed_segment.apply_central_impulse(Vector2(swing_force * delta, 0))
-
-		# Player follows segment sanft
+		# Soft follow
 		global_position = global_position.move_toward(grabbed_segment.global_position, 15 * delta)
 		velocity = Vector2.ZERO
 
-		# Play climb animation
+		# Swing with left/right input (sanfter Anschub)
+		if Input.is_action_pressed("move_left"):
+			grabbed_segment.apply_central_impulse(Vector2(-swing_force * delta * 0.2, 0))
+		if Input.is_action_pressed("move_right"):
+			grabbed_segment.apply_central_impulse(Vector2(swing_force * delta * 0.2, 0))
+
+		# Animation
 		animated_sprite.play("climb")
-		return # Skip normal movement while hanging
+		return  # Skip normal movement while hanging
 
 	# ---------------------
 	# Normal movement / Ladder
@@ -123,26 +123,9 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		animated_sprite.flip_h = true
 
-<<<<<<< Updated upstream
 	# ---------------------
-	# Rope-hanging logic
-	# ---------------------
-	if grab_joint and grabbed_rope:
-		# Spieler beeinflusst das Rope physikalisch
-		if direction != 0:
-			grabbed_rope.apply_central_impulse(Vector2(direction * 50, 0))
-		# Spieler kann abspringen
-		if Input.is_action_just_pressed("jump"):
-			release_rope()
-		# Leichte seitliche Bewegung auf Rope
-		velocity.x = direction * SPEED * 0.5
-		velocity += get_gravity() * delta
-		move_and_slide()
-		return  # Skip normal movement while on rope
-
-=======
 	# Animations
->>>>>>> Stashed changes
+	# ---------------------
 	if onLadder:
 		if velocity.y != 0:  
 			animated_sprite.play("climb")
@@ -156,11 +139,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.play("jump")
 
-<<<<<<< Updated upstream
-
-=======
 	# Movement
->>>>>>> Stashed changes
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
