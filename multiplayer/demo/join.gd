@@ -1,6 +1,6 @@
 extends Control
 
-var URL = "ws://localhost:8080"
+var URL = "ws://mysignalling-production.up.railway.app:8080"
 
 
 @onready var room = $VBoxContainer/Connect/RoomSecret
@@ -50,7 +50,7 @@ func _lobby_sealed():
 
 func _log(msg):
 	print(msg)
-	$VBoxContainer/TextEdit.text += str(msg) + "\n"
+	#$VBoxContainer/TextEdit.text += str(msg) + "\n"
 
 func _on_join_pressed():
 	if room.text != "":

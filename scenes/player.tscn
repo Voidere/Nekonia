@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfbttogu7tks"]
 
 [ext_resource type="Script" uid="uid://c40jbjourbakc" path="res://scripts/player.gd" id="1_unu5v"]
-[ext_resource type="SpriteFrames" uid="uid://b8ibgp5q37n5p" path="res://assets/game/player1.tres" id="2_61vw2"]
+[ext_resource type="SpriteFrames" uid="uid://u3vc6d0xmljc" path="res://assets/game/player2.tres" id="2_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yvqxj"]
 radius = 7.0
@@ -13,10 +13,8 @@ script = ExtResource("1_unu5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.55271e-15, -5.96046e-08)
-sprite_frames = ExtResource("2_61vw2")
-animation = &"take_damage"
-frame = 3
-frame_progress = 0.197759
+sprite_frames = ExtResource("2_g2els")
+animation = &"climb_idle"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 scale = Vector2(1.05, 1.05)

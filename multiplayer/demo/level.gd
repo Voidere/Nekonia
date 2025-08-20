@@ -1,4 +1,5 @@
-extends Node2D
+# File: World.gd   (attached to the root of World.tscn)
+extends Node
 
 @export var player_scene: PackedScene
 
@@ -21,6 +22,7 @@ func start_game():
 	print(" Game started! Everyone loaded.")
 
 func _spawn_player(id: int) -> void:
+	print("asd")
 	if has_node(str(id)):
 		return  # already exists
 	if player_scene == null:
@@ -28,7 +30,7 @@ func _spawn_player(id: int) -> void:
 		return
 	var p := player_scene.instantiate()
 	p.name = str(id)
-	p.position = Vector2(130 + (id - 1) * 20, 90)
+	p.position = Vector2(100 + id % 10 * 60, 200)
 	add_child(p, true)
 	p.set_multiplayer_authority(id)
 

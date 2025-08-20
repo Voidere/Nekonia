@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cd4xuxqi1qlty"]
 
-[ext_resource type="Script" uid="uid://2vw3wvjqx84o" path="res://multiplayer/game/player.gd" id="1_i451d"]
+[ext_resource type="Script" uid="uid://2vw3wvjqx84o" path="res://multiplayer/demo/player.gd" id="1_i451d"]
 [ext_resource type="SpriteFrames" uid="uid://b8ibgp5q37n5p" path="res://assets/game/player1.tres" id="2_h3aoo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjrdw"]

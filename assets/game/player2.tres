@@ -1,7 +1,8 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3 uid="uid://u3vc6d0xmljc"]
+[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://u3vc6d0xmljc"]
 
 [ext_resource type="Texture2D" uid="uid://du1afd82hoxyp" path="res://assets/oragnecatclimb.png" id="1_ejh33"]
 [ext_resource type="Texture2D" uid="uid://isnrobhl6fl2" path="res://assets/pixil-frame-0 (3).png" id="2_fh1lm"]
+[ext_resource type="Texture2D" uid="uid://bta2ahjq8a5u5" path="res://assets/skinscat/Cat/oragnecatclimb.png" id="2_oqh0g"]
 [ext_resource type="Texture2D" uid="uid://b415vkfys7chh" path="res://assets/pixil-frame-0 (4).png" id="3_lhb67"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34aea"]
@@ -27,6 +28,10 @@ region = Rect2(0, 128, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2yqj"]
 atlas = ExtResource("1_ejh33")
 region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6npyq"]
+atlas = ExtResource("2_oqh0g")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0nyn"]
 atlas = ExtResource("2_fh1lm")
@@ -112,6 +117,14 @@ animations = [{
 "loop": true,
 "name": &"climb",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6npyq")
+}],
+"loop": true,
+"name": &"climb_idle",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

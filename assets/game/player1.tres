@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=72 format=3 uid="uid://b8ibgp5q37n5p"]
+[gd_resource type="SpriteFrames" load_steps=73 format=3 uid="uid://b8ibgp5q37n5p"]
 
 [ext_resource type="Texture2D" uid="uid://d26s0ioaceqac" path="res://assets/skinscat/WhiteCatDie.png" id="1_267kl"]
 [ext_resource type="Texture2D" uid="uid://bs7yc8gt540k1" path="res://assets/skinscat/climb2.0.png" id="1_wxji4"]
@@ -8,14 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://g2qaoptefbmd" path="res://assets/mateuscat.png" id="5_srstn"]
 [ext_resource type="Texture2D" uid="uid://dy3uv16dtxbje" path="res://assets/WhiteCatDamage.png" id="7_e1fd3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6mocd"]
-atlas = ExtResource("1_wxji4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tr5n6"]
-atlas = ExtResource("1_wxji4")
-region = Rect2(0, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5sx1"]
 atlas = ExtResource("1_wxji4")
 region = Rect2(0, 64, 32, 32)
@@ -24,13 +16,25 @@ region = Rect2(0, 64, 32, 32)
 atlas = ExtResource("1_wxji4")
 region = Rect2(0, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0nwvv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr5n6"]
 atlas = ExtResource("1_wxji4")
-region = Rect2(0, 128, 32, 32)
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8fbf8"]
 atlas = ExtResource("1_wxji4")
 region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nwvv"]
+atlas = ExtResource("1_wxji4")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjuhs"]
+atlas = ExtResource("1_wxji4")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3ivt"]
+atlas = ExtResource("1_wxji4")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0s4kb"]
 atlas = ExtResource("1_267kl")
@@ -268,26 +272,34 @@ region = Rect2(0, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6mocd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tr5n6")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_u5sx1")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iskom")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0nwvv")
+"texture": SubResource("AtlasTexture_tr5n6")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8fbf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nwvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjuhs")
 }],
 "loop": true,
 "name": &"climb",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3ivt")
+}],
+"loop": true,
+"name": &"climb_idle",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
