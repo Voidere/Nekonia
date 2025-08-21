@@ -1,6 +1,6 @@
 extends Control
 
-var URL = "ws://mysignalling-production.up.railway.app:8080"
+var URL = "ws://localhost:8080"
 
 
 @onready var room = $VBoxContainer/Connect/RoomSecret

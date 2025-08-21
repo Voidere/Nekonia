@@ -7488,12 +7488,12 @@ sources/3 = SubResource("TileSetAtlasSource_l1v63")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yiobi"]
 
-[sub_resource type="Gradient" id="Gradient_gasb8"]
+[sub_resource type="Gradient" id="Gradient_xwks1"]
 offsets = PackedFloat32Array(0, 0.480663, 1)
 colors = PackedColorArray(0.933333, 0.788235, 0.980392, 0, 0.918139, 0.737782, 0.976293, 1, 0.933333, 0.788235, 0.980392, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xwks1"]
-gradient = SubResource("Gradient_gasb8")
+gradient = SubResource("Gradient_xwks1")
 width = 1
 height = 32
 fill_to = Vector2(0, 1)
@@ -7502,14 +7502,14 @@ fill_to = Vector2(0, 1)
 offsets = PackedFloat32Array(0.039548, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_1ymaa"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ng6o1"]
 gradient = SubResource("Gradient_ng6o1")
 
 [sub_resource type="Gradient" id="Gradient_okerj"]
 offsets = PackedFloat32Array(0, 0.491525, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_lcaix"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_okerj"]
 gradient = SubResource("Gradient_okerj")
 
 [sub_resource type="Curve" id="Curve_bwcbd"]
@@ -7517,7 +7517,7 @@ _limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.08, 34.512), 0.0, 0.0, 0, 0, Vector2(0.16381, -18.8119), 0.0, 0.0, 0, 0, Vector2(0.270476, 34.512), 0.0, 0.0, 0, 0, Vector2(0.394286, -22.4894), 0.0, 0.0, 0, 0, Vector2(0.493333, 34.512), 0.0, 0.0, 0, 0, Vector2(0.617143, -20.6506), 0.0, 0.0, 0, 0, Vector2(0.723809, 28.9957), 0.0, 0.0, 0, 0, Vector2(0.878095, -20.6506), 0.0, 0.0, 0, 0, Vector2(0.994286, 21.6407), 0.0, 0.0, 0, 0]
 point_count = 10
 
-[sub_resource type="CurveTexture" id="CurveTexture_d0lxk"]
+[sub_resource type="CurveTexture" id="CurveTexture_bwcbd"]
 curve = SubResource("Curve_bwcbd")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_heyux"]
@@ -7527,12 +7527,12 @@ emission_box_extents = Vector3(800, 800, 1)
 gravity = Vector3(100, 20, 0)
 tangential_accel_min = -2.23517e-06
 tangential_accel_max = 6.0
-tangential_accel_curve = SubResource("CurveTexture_d0lxk")
+tangential_accel_curve = SubResource("CurveTexture_bwcbd")
 damping_max = 100.0
 scale_min = 1.5
 scale_max = 1.8
-color_ramp = SubResource("GradientTexture1D_lcaix")
-color_initial_ramp = SubResource("GradientTexture1D_1ymaa")
+color_ramp = SubResource("GradientTexture1D_okerj")
+color_initial_ramp = SubResource("GradientTexture1D_ng6o1")
 
 [node name="Ruinen_Level_3" type="Node2D"]
 script = ExtResource("1_etwb0")

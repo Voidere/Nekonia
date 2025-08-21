@@ -8525,6 +8525,7 @@ position_smoothing_speed = 10.0
 script = SubResource("GDScript_rp524")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("4_q32b4")]
 anchors_preset = 8
@@ -8692,18 +8693,11 @@ scale = Vector2(0.999446, 0.987635)
 script = ExtResource("42_o3fxb")
 
 [node name="Node2D" parent="." instance=ExtResource("37_1mk2g")]
-z_index = 2
-position = Vector2(1863.03, -925.443)
-scale = Vector2(0.933918, 0.424508)
+z_index = 10
+position = Vector2(1328.74, -866.717)
+scale = Vector2(1.16366, 0.665435)
 amount = 4000
 visibility_rect = Rect2(-1200, -100, 3000, 1400)
-
-[node name="Node2D2" parent="." instance=ExtResource("37_1mk2g")]
-z_index = 2
-position = Vector2(609.338, -800.903)
-scale = Vector2(0.933918, 0.424508)
-amount = 4000
-visibility_rect = Rect2(-1000, -100, 3000, 2100)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_43ehb")
