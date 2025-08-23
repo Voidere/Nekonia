@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://smntmq4d5an0"]
+[gd_scene load_steps=63 format=4 uid="uid://smntmq4d5an0"]
 
 [ext_resource type="Script" uid="uid://dm0cboflehdxb" path="res://scripts/ruinen_level_3.gd" id="1_etwb0"]
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="1_k6egf"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://c1jrgejew0yih" path="res://scripts/pickups/pickup14.gd" id="18_dab5t"]
 [ext_resource type="PackedScene" uid="uid://euimrmjjxn4l" path="res://scenes/ladder.tscn" id="21_wdnm1"]
 [ext_resource type="AudioStream" uid="uid://y87md6jy4cjw" path="res://assets/sounds/music/6.-Constantihn-Lange-Curious-Minds.mp3" id="22_xwks1"]
+[ext_resource type="Script" uid="uid://dk0q26ltvqmfd" path="res://scripts/music3.gd" id="23_ng6o1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5c2oa"]
 texture = ExtResource("1_uon1f")
@@ -7672,6 +7673,7 @@ stream = ExtResource("22_xwks1")
 volume_db = -16.865
 autoplay = true
 bus = &"Music"
+script = ExtResource("23_ng6o1")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = 5

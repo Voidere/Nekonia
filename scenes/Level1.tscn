@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=4 uid="uid://tx8tagvovd60"]
+[gd_scene load_steps=129 format=4 uid="uid://tx8tagvovd60"]
 
 [ext_resource type="Script" uid="uid://ckv5o83f26bag" path="res://scripts/game.gd" id="1_jv6nh"]
 [ext_resource type="Script" uid="uid://c4dm57ql6l7it" path="res://scripts/game_manager.gd" id="2_rqlgo"]
@@ -44,6 +44,7 @@
 [ext_resource type="Script" uid="uid://da4laug0y4uuk" path="res://scripts/pickups/pickup8.gd" id="46_m8edm"]
 [ext_resource type="Script" uid="uid://coufxs7smy1m3" path="res://scripts/pickups/pickup9.gd" id="47_n1qhj"]
 [ext_resource type="Script" uid="uid://2bv5aklg6bwh" path="res://scripts/pickups/pickup10.gd" id="48_2icac"]
+[ext_resource type="Script" uid="uid://rqnrpfcka8ah" path="res://scripts/music1.gd" id="48_7vka5"]
 [ext_resource type="Script" uid="uid://b8xbrdct10pgc" path="res://scripts/pickups/pickup11.gd" id="49_66nn3"]
 [ext_resource type="Script" uid="uid://b0u0yepyrj3xn" path="res://scripts/pickups/pickup12.gd" id="50_82kr8"]
 [ext_resource type="AudioStream" uid="uid://vmvsr8s0xyrl" path="res://assets/sounds/music/03-Oberst & Buchner-Marble Arch (Original Mix) - Master V3 44k24bit.mp3" id="51_0nv2s"]
@@ -10737,6 +10738,7 @@ stream = ExtResource("51_0nv2s")
 volume_db = -24.36
 autoplay = true
 bus = &"Music"
+script = ExtResource("48_7vka5")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(1, 1)

@@ -2378,7 +2378,6 @@ anchor_bottom = 0.5
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="openedletter" type="Node2D" parent="Player/CanvasLayer2"]
 position = Vector2(428, 367)

@@ -8525,7 +8525,6 @@ position_smoothing_speed = 10.0
 script = SubResource("GDScript_rp524")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("4_q32b4")]
 anchors_preset = 8

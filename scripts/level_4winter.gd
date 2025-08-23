@@ -50,11 +50,11 @@ func _process(delta: float) -> void:
 func pauseMenu():
 	if paused:
 		pause_menu.hide()
-		music_manager.emit_signal("stop_music")
+		music_manager.emit_signal("play_music")
 		Engine.time_scale = 1
 	else:
 		pause_menu.show()
-		music_manager.emit_signal("stop_music")
+		music_manager.emit_signal("pause_music")
 		Engine.time_scale = 0
 	paused = !paused
 
