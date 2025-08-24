@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=4 uid="uid://b6ptgqyv3rqou"]
+[gd_scene load_steps=145 format=4 uid="uid://b6ptgqyv3rqou"]
 
 [ext_resource type="Script" uid="uid://dm2rxj37u1kao" path="res://scripts/titleScreen.gd" id="1_a6h3n"]
 [ext_resource type="Theme" uid="uid://dafigwk7pakgp" path="res://assets/own/buttonsbetter.tres" id="2_wk16c"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://cxebq7pbq2miq" path="res://assets/sprite3a.PNG" id="17_yrkmp"]
 [ext_resource type="Texture2D" uid="uid://b2gsv7i2ywh48" path="res://assets/newbuildings/Npcs/32x32_spr_alien_04.png" id="18_coo36"]
 [ext_resource type="Texture2D" uid="uid://b57e2jf03it7v" path="res://assets/Buildings.png" id="18_idqjp"]
-[ext_resource type="PackedScene" uid="uid://c6hrfo42mhvcq" path="res://scenes/news2.tscn" id="22_ixq1e"]
 [ext_resource type="Texture2D" uid="uid://btwov5b0kn7cl" path="res://assets/Social_Media/Minimalistic_Shaded/Discord.png" id="23_268xq"]
 [ext_resource type="Texture2D" uid="uid://dmrfd2o5sebhl" path="res://assets/1qwseggnew.png" id="23_jqef6"]
 [ext_resource type="Texture2D" uid="uid://bi13gbp3ght8r" path="res://assets/Social_Media/Minimalistic/Discord.png" id="24_lycs1"]
@@ -9068,15 +9067,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("6_jlyid")
 theme_override_fonts/font = ExtResource("12_fmod0")
-
-[node name="Panel" parent="." instance=ExtResource("22_ixq1e")]
-visible = false
-z_index = 4
-layout_mode = 0
-offset_left = 167.0
-offset_top = 143.0
-offset_right = 601.0
-offset_bottom = 445.0
 
 [node name="discord" type="Button" parent="."]
 z_index = 1

@@ -67,17 +67,22 @@ text = " Main Menu "
 
 [node name="sound" parent="." instance=ExtResource("4_5w6ei")]
 layout_mode = 1
-offset_left = 258.0
-offset_top = 226.0
-offset_right = 258.0
-offset_bottom = 226.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
 
 [node name="soundeexit" type="Button" parent="sound"]
 layout_mode = 0
-offset_left = -249.0
-offset_top = -213.0
-offset_right = -225.0
-offset_bottom = -182.0
+offset_left = 45.0
+offset_top = 44.0
+offset_right = 69.0
+offset_bottom = 75.0
 scale = Vector2(3.27206, 1.92372)
 theme_override_fonts/font = ExtResource("5_jiu6o")
 text = "x"

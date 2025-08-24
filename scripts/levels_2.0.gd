@@ -36,17 +36,20 @@ func _process(delta):
 	h_box_container.position.x = -h_scroll_bar.value
 
 func _on_left_pressed():
+	AudioManager.play_button_click()
 	if current_index > 0:
 		current_index -= 1
 		h_scroll_bar.value = current_index * level_width
 
 func _on_right_pressed():
+	AudioManager.play_button_click()
 	if current_index < max_index:
 		current_index += 1
 		h_scroll_bar.value = current_index * level_width
 		
 		
 func _on_button_play_pressed() -> void:
+	AudioManager.play_button_click()
 	if current_index >= 0 and current_index < level_paths.size():
 		var path = level_paths[current_index]
 		get_tree().change_scene_to_file(path)

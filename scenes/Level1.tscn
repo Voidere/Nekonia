@@ -10424,7 +10424,6 @@ position_smoothing_speed = 4.0
 script = SubResource("GDScript_ol3bp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer" instance=ExtResource("4_jwvsr")]
 anchors_preset = 8
@@ -10452,7 +10451,6 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="end_pop" parent="CanvasLayer" instance=ExtResource("31_4e5yt")]
 
@@ -10679,7 +10677,6 @@ theme_override_font_sizes/font_size = 170
 text = "TRY JUMPING ON ROOFS"
 
 [node name="End_door" parent="." instance=ExtResource("32_4pk5o")]
-visible = false
 z_index = 20
 position = Vector2(3841, -30)
 scale = Vector2(8.51996, 10.72)

@@ -15,15 +15,14 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	AudioManager.play_button_click()
-	await get_tree().create_timer(0.05).timeout
+	menu.hide()   
 	sound.show()
-
+	sound.move_to_front()
 
 func _on_button_3_pressed() -> void:
 	AudioManager.play_button_click()
-	await get_tree().create_timer(0.05).timeout
 	Global.current_level_collected_coins.clear()
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/titleScreen.tscn")
 	main.pauseMenu()
 	music_manager.emit_signal("stop_music")
 

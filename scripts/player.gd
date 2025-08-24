@@ -158,7 +158,7 @@ func _physics_process(delta: float) -> void:
 func take_damage():
 	if health > 0:
 		health -= 1
-		animated_sprite.play("take_damage")
+		animated_sprite.play("damage")
 		update_heart_display()
 
 func update_heart_display():

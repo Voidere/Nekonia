@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1bqjmgvhlh7p"]
+[gd_scene load_steps=12 format=3 uid="uid://d1bqjmgvhlh7p"]
 
 [ext_resource type="Script" uid="uid://ddboeb88t4pvk" path="res://scripts/levels_2.0.gd" id="1_qewaf"]
 [ext_resource type="Texture2D" uid="uid://x44u7k42ry25" path="res://assets/KenoStuff/level1.PNG" id="2_c1c67"]
 [ext_resource type="FontFile" uid="uid://ccimawtc2hstw" path="res://PixelOperator8-Bold.ttf" id="2_cnmo0"]
 [ext_resource type="Texture2D" uid="uid://b8nas5b508q8c" path="res://assets/KenoStuff/level2.PNG" id="4_6xou3"]
-[ext_resource type="PackedScene" uid="uid://b0rwkhogu30y4" path="res://multiplayer/game/join.tscn" id="4_8bswv"]
+[ext_resource type="Theme" uid="uid://drrsrm2wiat7u" path="res://assets/own/buttonnew.tres" id="4_8bswv"]
 [ext_resource type="Texture2D" uid="uid://dw74f51a2lhuu" path="res://assets/KenoStuff/sprite4a.PNG" id="5_8bswv"]
 [ext_resource type="Texture2D" uid="uid://cwonkpce5xa7l" path="res://assets/cursornormal.png" id="5_crxt8"]
-[ext_resource type="PackedScene" uid="uid://cpwp4xx6mv5p" path="res://multiplayer/game/host.tscn" id="5_id3ju"]
+[ext_resource type="FontFile" uid="uid://0nyawcbtrbur" path="res://assets/fonts/PixelOperator8.ttf" id="5_id3ju"]
 [ext_resource type="Texture2D" uid="uid://by7bjlivst8nn" path="res://assets/KenoStuff/level4.PNG" id="6_id3ju"]
+[ext_resource type="FontFile" uid="uid://u8ua5l8rh47k" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="6_ppdqf"]
 [ext_resource type="Texture2D" uid="uid://cya1iq3h5r13f" path="res://assets/KenoStuff/bonus.PNG" id="7_ppdqf"]
 
 [node name="HScrollBar" type="HScrollBar"]
@@ -29,24 +30,6 @@ offset_right = 5773.0
 offset_bottom = 648.0
 mouse_filter = 0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_c1c67")
-
-[node name="Label" type="Label" parent="HBoxContainer/TextureRect"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -200.0
-offset_top = 48.0
-offset_right = 200.0
-offset_bottom = 112.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_cnmo0")
-theme_override_font_sizes/font_size = 64
-text = "Local"
-
 [node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_c1c67")
@@ -65,24 +48,62 @@ theme_override_fonts/font = ExtResource("2_cnmo0")
 theme_override_font_sizes/font_size = 64
 text = "Online"
 
-[node name="ClientUI" parent="HBoxContainer/TextureRect7" instance=ExtResource("4_8bswv")]
-layout_mode = 2
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 218.0
-offset_top = 209.0
-offset_right = 218.0
-offset_bottom = 857.0
-scale = Vector2(2.55393, 2.72)
+[node name="Button" type="Button" parent="HBoxContainer/TextureRect7"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 220.0
+offset_right = 212.0
+offset_bottom = 254.0
+scale = Vector2(2.38006, 2.38006)
+theme = ExtResource("4_8bswv")
+theme_override_fonts/font = ExtResource("5_id3ju")
+text = "Host"
 
-[node name="ClientUI2" parent="HBoxContainer/TextureRect7" instance=ExtResource("5_id3ju")]
+[node name="Button2" type="Button" parent="HBoxContainer/TextureRect7"]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 220.0
+offset_right = 823.0
+offset_bottom = 254.0
+scale = Vector2(2.38006, 2.38006)
+theme = ExtResource("4_8bswv")
+theme_override_fonts/font = ExtResource("5_id3ju")
+text = "Join"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/TextureRect7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7697, 16.167)
+color = Color(0.223529, 0.223529, 0.223529, 0.690196)
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect7"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 407.0
+offset_right = 520.0
+offset_bottom = 430.0
+scale = Vector2(2.35775, 3.55002)
+theme_override_fonts/font = ExtResource("6_ppdqf")
+text = "Currently Unavailable"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_c1c67")
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect"]
 layout_mode = 1
-offset_left = 444.0
-offset_top = 213.0
-offset_right = 444.0
-offset_bottom = 213.0
-scale = Vector2(1.7577, 3.2041)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 48.0
+offset_right = 200.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_cnmo0")
+theme_override_font_sizes/font_size = 64
+text = "Local"
 
 [node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2

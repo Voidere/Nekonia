@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=4 uid="uid://yj8s1ao1orjl"]
+[gd_scene load_steps=124 format=4 uid="uid://yj8s1ao1orjl"]
 
 [ext_resource type="Script" uid="uid://c4dm57ql6l7it" path="res://scripts/game_manager.gd" id="1_4fep8"]
 [ext_resource type="PackedScene" uid="uid://cfbttogu7tks" path="res://scenes/player.tscn" id="1_a1ekr"]
@@ -52,7 +52,6 @@
 [ext_resource type="PackedScene" uid="uid://dbfcjfo66fqvb" path="res://scenes/killzone_2_0.tscn" id="49_bo3fb"]
 [ext_resource type="Script" uid="uid://durxoonmufg8h" path="res://scenes/key.gd" id="50_do5j8"]
 [ext_resource type="Texture2D" uid="uid://cabg25tjyc62l" path="res://assets/door dungeon.png" id="51_uroul"]
-[ext_resource type="PackedScene" uid="uid://b7qh6x5ytkcoo" path="res://scenes/npc.tscn" id="53_018vs"]
 
 [sub_resource type="GDScript" id="GDScript_rp524"]
 script/source = "extends Camera2D
@@ -8742,12 +8741,6 @@ texture = ExtResource("51_uroul")
 [node name="door" type="CollisionShape2D" parent="doorsp/Area2D2"]
 position = Vector2(-0.0001477, 1.51358)
 shape = SubResource("RectangleShape2D_cvso4")
-
-[node name="NPC" type="Node" parent="."]
-
-[node name="Npc" parent="NPC" instance=ExtResource("53_018vs")]
-z_index = 14
-position = Vector2(2185, -547)
 
 [connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="doorsp/Area2D2" to="Sprite2D" method="_on_area_2d_2_body_entered"]

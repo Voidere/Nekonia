@@ -2339,13 +2339,11 @@ position = Vector2(93, 9)
 zoom = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="end_pop" parent="Player/CanvasLayer" instance=ExtResource("3_cxumb")]
 size_flags_horizontal = 4
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="PauseMenu" parent="Player/CanvasLayer4" instance=ExtResource("3_6v7yo")]
 anchors_preset = 8
@@ -2356,7 +2354,6 @@ anchor_bottom = 0.5
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player"]
-visible = false
 
 [node name="Healthbar" parent="Player/CanvasLayer2" instance=ExtResource("4_dx3ep")]
 anchors_preset = 1
