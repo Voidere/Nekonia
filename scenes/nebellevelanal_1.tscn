@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://du55an2ft21br"]
+[gd_scene load_steps=105 format=4 uid="uid://du55an2ft21br"]
 
 [ext_resource type="Texture2D" uid="uid://b57e2jf03it7v" path="res://assets/Buildings.png" id="1_1xu4r"]
 [ext_resource type="Texture2D" uid="uid://c6s1rx0yypggc" path="res://assets/rat sewer tile set/trickle.png" id="1_clh2e"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://b3gn7fcqxkj5" path="res://assets/rat sewer tile set/water 2.png" id="20_6l0re"]
 [ext_resource type="Texture2D" uid="uid://b1xutmimkja4r" path="res://assets/Free Industrial Zone Tileset/3 Objects/Pointer1.png" id="20_8qhx8"]
 [ext_resource type="Texture2D" uid="uid://chhi0amcxf6c4" path="res://assets/Free Industrial Zone Tileset/3 Objects/Board1.png" id="21_aqup7"]
+[ext_resource type="Texture2D" uid="uid://bspbwv88qmuk3" path="res://assets/VInesV2.png" id="21_un1f7"]
 [ext_resource type="Texture2D" uid="uid://dafbcofr2swpc" path="res://assets/Free Industrial Zone Tileset/3 Objects/Board3.png" id="22_nemo5"]
 [ext_resource type="Texture2D" uid="uid://clov318cyixb6" path="res://assets/Free Industrial Zone Tileset/3 Objects/Board2.png" id="23_haf0s"]
 [ext_resource type="Texture2D" uid="uid://jt4tlbtdgcpt" path="res://assets/Free Industrial Zone Tileset/3 Objects/Fence1.png" id="24_l2bte"]
@@ -2779,6 +2780,46 @@ texture = ExtResource("20_8qhx8")
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbjh2"]
+texture = ExtResource("21_un1f7")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+8:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbptw"]
 texture = ExtResource("21_aqup7")
 0:0/0 = 0
@@ -3476,6 +3517,7 @@ sources/22 = SubResource("TileSetAtlasSource_vu3ms")
 sources/23 = SubResource("TileSetAtlasSource_dj8sb")
 sources/24 = SubResource("TileSetAtlasSource_sdvkc")
 sources/25 = SubResource("TileSetAtlasSource_whkj4")
+sources/11 = SubResource("TileSetAtlasSource_cbjh2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3w2dn"]
 texture = ExtResource("2_qnekk")
@@ -3816,7 +3858,7 @@ tile_set = SubResource("TileSet_dnqbd")
 
 [node name="details" type="TileMapLayer" parent="."]
 z_index = 6
-tile_map_data = PackedByteArray("AAADAPr/AQAGAA4AAAAQAPr/AQASAAsAAAAQAPn/AQAPAAoAAAARAPn/AQAQAAoAAAASAPn/AQARAAoAAAAUAPn/AQARAAoAAAAKAPn/BAAAAAIAAAAKAPr/BAAAAAMAAAALAPn/BAABAAIAAAALAPr/BAABAAMAAAAHAPf/AwAMAAUAAAAPAPb/AwAMAAUAAAD6//b/AwAMAAUAAADv//f/AwAMAAUAAADz//b/AwAMAAUAAAD1//f/AwAMAAgAAAAFAPr/AwANAAgAAAAGAPr/AwANAAgAAAAAAPj/AwAMAAgAAAANAPr/AwANAAgAAADw//j/AwAMAAgAAADu//j/BgAGAAMAAADt//j/BgAGAAMAAADy//j/AwANAAgAAAD+//j/BgAGAAMAAADy//f/BgADAAQAAAA=")
+tile_map_data = PackedByteArray("AAADAPr/AQAGAA4AAAAQAPr/AQASAAsAAAAQAPn/AQAPAAoAAAARAPn/AQAQAAoAAAASAPn/AQARAAoAAAAUAPn/AQARAAoAAAAKAPn/BAAAAAIAAAAKAPr/BAAAAAMAAAALAPn/BAABAAIAAAALAPr/BAABAAMAAAAHAPf/AwAMAAUAAAAPAPb/AwAMAAUAAADz//b/AwAMAAUAAAD1//f/AwAMAAgAAAAFAPr/AwANAAgAAAAGAPr/AwANAAgAAAAAAPj/AwAMAAgAAAANAPr/AwANAAgAAADw//j/AwAMAAgAAADu//j/BgAGAAMAAADt//j/BgAGAAMAAADy//j/AwANAAgAAAD+//j/BgAGAAMAAADy//f/BgADAAQAAAD///f/CwAHAAEAAAA=")
 tile_set = SubResource("TileSet_t0omb")
 
 [node name="details2" type="TileMapLayer" parent="."]
@@ -3826,12 +3868,12 @@ tile_set = SubResource("TileSet_t0omb")
 
 [node name="details3" type="TileMapLayer" parent="."]
 z_index = 200
-tile_map_data = PackedByteArray("AAD6//b/AwAMAAUAAAA=")
+tile_map_data = PackedByteArray("AADz//b/CwACAAAAAADz//f/CwACAAIAAADz//j/CwACAAMAAADv//f/CwAEAAAAAADv//j/CwAEAAEAAAD5//b/AQAQAAgAAAD6//b/AQARAAgAAAA=")
 tile_set = SubResource("TileSet_t0omb")
 
 [node name="details4" type="TileMapLayer" parent="."]
 z_index = 200
-tile_map_data = PackedByteArray("AAD4//j/AQATAAgAAGD5//b/AQANAAYAAHAJAPr/FgAAAAEAAAAKAPn/FgABAAAAAAAKAPr/FgABAAEAAAD8//j/GQAAAAEAAAD9//j/GQABAAEAAADv//j/AwAMAAcAAADv//f/AwAMAAUAAAAHAPj/AwAMAAYAAAAHAPn/AwAMAAYAAAAHAPr/AwAMAAcAAAD6//f/AwAMAAYAAAD6//j/AwAMAAcAAAD6//b/AQANAAUAAHA=")
+tile_map_data = PackedByteArray("AAD4//j/AQATAAgAAGAJAPr/FgAAAAEAAAAKAPn/FgABAAAAAAAKAPr/FgABAAEAAAD8//j/GQAAAAEAAAD9//j/GQABAAEAAAAHAPj/CwABAAAAAAAHAPn/CwABAAIAAAAHAPr/CwABAAMAAAD6//b/CwAAAAAAAAD6//f/CwAAAAIAAAD6//j/CwAAAAMAAAAHAPb/CwABAAAAAAAHAPf/CwABAAEAAAAVAPb/CwAFAAAAAAAVAPf/CwAFAAEAAAAWAPb/CwAGAAAAAAAWAPf/CwAGAAEAAAAQAPb/CwAFAAIAAAARAPb/CwAGAAIAAAASAPb/CwAHAAIAAAAPAPb/CwAIAAAAAAAPAPf/CwAIAAAAAAAPAPj/CwAIAAEAAAAPAPn/CwAIAAIAAAA=")
 tile_set = SubResource("TileSet_t0omb")
 
 [node name="datailst" type="TileMapLayer" parent="."]
